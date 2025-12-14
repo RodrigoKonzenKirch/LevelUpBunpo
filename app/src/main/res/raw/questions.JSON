@@ -1,0 +1,152 @@
+[
+  {
+    "grammar_point_id": 0,
+    "japanese_question": "私_学生です。",
+    "correct_option": "は",
+    "Incorrect_option_one": "を",
+    "Incorrect_option_two": "と",
+    "Incorrect_option_three": "で",
+    "japanese_answer": "私は学生です。",
+    "english_translation": "I am a student. (The topic is: I)"
+  },
+  {
+    "grammar_point_id": 0,
+    "japanese_question": "コーヒー_飲みますが、お茶_飲みません。",
+    "correct_option": "は",
+    "Incorrect_option_one": "も",
+    "Incorrect_option_two": "な",
+    "Incorrect_option_three": "に",
+    "japanese_answer": "コーヒーは飲みますが、お茶は飲みません。",
+    "english_translation": "I drink coffee, but I don't drink tea. (Contrasting coffee and tea)"
+  },
+  {
+    "grammar_point_id": 0,
+    "japanese_question": "空_青いです。",
+    "correct_option": "は",
+    "Incorrect_option_one": "を",
+    "Incorrect_option_two": "に",
+    "Incorrect_option_three": "か",
+    "japanese_answer": "空は青いです。",
+    "english_translation": "The sky is blue."
+  },
+  {
+    "grammar_point_id": 1,
+    "japanese_question": "私_かばんは新しいです。",
+    "correct_option": "の",
+    "Incorrect_option_one": "は",
+    "Incorrect_option_two": "も",
+    "Incorrect_option_three": "を",
+    "japanese_answer": "私のかばんは新しいです。",
+    "english_translation": "My bag is new."
+  },
+  {
+    "grammar_point_id": 1,
+    "japanese_question": "これは日本語_本です。",
+    "correct_option": "の",
+    "Incorrect_option_one": "も",
+    "Incorrect_option_two": "が",
+    "Incorrect_option_three": "に",
+    "japanese_answer": "これは日本語の本です。",
+    "english_translation": "This is a Japanese book."
+  },
+  {
+    "grammar_point_id": 1,
+    "japanese_question": "私_髪よりあなた_髪のほうがきれいです。",
+    "correct_option": "の",
+    "Incorrect_option_one": "へ",
+    "Incorrect_option_two": "と",
+    "Incorrect_option_three": "に",
+    "japanese_answer": "私の髪よりあなたの髪のほうがきれいです。",
+    "english_translation": "Your hair is prettier than mine."
+  },
+  {
+    "grammar_point_id": 2,
+    "japanese_question": "私はコーヒー_飲みます。",
+    "correct_option": "も",
+    "Incorrect_option_one": "の",
+    "Incorrect_option_two": "に",
+    "Incorrect_option_three": "へ",
+    "japanese_answer": "私はコーヒーも飲みます。",
+    "english_translation": "I drink coffee, too."
+  },
+  {
+    "grammar_point_id": 2,
+    "japanese_question": "誰_いません。",
+    "correct_option": "も",
+    "Incorrect_option_one": "は",
+    "Incorrect_option_two": "の",
+    "Incorrect_option_three": "に",
+    "japanese_answer": "誰もいません。",
+    "english_translation": "No one is here. (There is no one here.)"
+  },
+  {
+    "grammar_point_id": 2,
+    "japanese_question": "私_兄_学生です。",
+    "correct_option": "も",
+    "Incorrect_option_one": "に",
+    "Incorrect_option_two": "は",
+    "Incorrect_option_three": "を",
+    "japanese_answer": "私も兄も学生です。",
+    "english_translation": "Both my older brother and I are students."
+  },
+  {
+    "grammar_point_id": 3,
+    "japanese_question": "私はリンゴ_食べています。",
+    "correct_option": "を",
+    "Incorrect_option_one": "で",
+    "Incorrect_option_two": "に",
+    "Incorrect_option_three": "は",
+    "japanese_answer": "私はリンゴを食べています。",
+    "english_translation": "I'm eating an apple."
+  },
+  {
+    "grammar_point_id": 3,
+    "japanese_question": "私は毎日日本語_勉強します。",
+    "correct_option": "を",
+    "Incorrect_option_one": "に",
+    "Incorrect_option_two": "で",
+    "Incorrect_option_three": "か",
+    "japanese_answer": "私は毎日日本語を勉強します。",
+    "english_translation": "I study Japanese every day."
+  },
+  {
+    "grammar_point_id": 3,
+    "japanese_question": "公園_散歩します。",
+    "correct_option": "を",
+    "Incorrect_option_one": "は",
+    "Incorrect_option_two": "で",
+    "Incorrect_option_three": "が",
+    "japanese_answer": "公園を散歩します。",
+    "english_translation": "I walk through the park."
+  },
+  {
+    "grammar_point_id": 4,
+    "japanese_question": "窓の外に猫_います。",
+    "correct_option": "が",
+    "Incorrect_option_one": "を",
+    "Incorrect_option_two": "で",
+    "Incorrect_option_three": "へ",
+    "japanese_answer": "窓の外に猫がいます。",
+    "english_translation": "There is a cat outside the window."
+  },
+  {
+    "grammar_point_id": 4,
+    "japanese_question": "私は日本語_分かります。",
+    "correct_option": "が",
+    "Incorrect_option_one": "へ",
+    "Incorrect_option_two": "か",
+    "Incorrect_option_three": "の",
+    "japanese_answer": "私は日本語が分かります。",
+    "english_translation": "I understand Japanese."
+  },
+  {
+    "grammar_point_id": 4,
+    "japanese_question": "新しい本_欲しいです。",
+    "correct_option": "が",
+    "Incorrect_option_one": "の",
+    "Incorrect_option_two": "に",
+    "Incorrect_option_three": "と",
+    "japanese_answer": "新しい本が欲しいです。",
+    "english_translation": "I want a new book."
+  }
+]

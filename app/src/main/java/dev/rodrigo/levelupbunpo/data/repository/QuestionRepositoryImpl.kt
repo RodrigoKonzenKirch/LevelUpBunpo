@@ -1,0 +1,18 @@
+package dev.rodrigo.levelupbunpo.data.repository
+
+import dev.rodrigo.levelupbunpo.data.local.Question
+import dev.rodrigo.levelupbunpo.data.local.QuestionDao
+import javax.inject.Inject
+
+class QuestionRepositoryImpl @Inject constructor(
+    private val questionDao: QuestionDao
+) : QuestionRepository {
+
+    override suspend fun insertAll(questions: List<Question>) {
+        questionDao.insertAll(questions)
+    }
+
+    override suspend fun getAllQuestions(): List<Question> {
+        return questionDao.getAllQuestions()
+    }
+}

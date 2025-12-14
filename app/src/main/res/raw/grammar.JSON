@@ -1,0 +1,37 @@
+[
+  {
+    "grammar_point": "〜は (wa)",
+    "jlpt_level": "N5",
+    "meaning": "Topic Marker",
+    "explanation": "This particle marks the topic or theme of the sentence. It tells the listener what the sentence is primarily about, setting the context for the rest of the information. Although written using the hiragana は (ha), it is always pronounced wa when used as a topic marker. It can also be used to show contrast between two or more items.",
+    "mastery_level": 0
+  },
+  {
+    "grammar_point": "〜の (no)",
+    "jlpt_level": "N5",
+    "meaning": "of / belonging to (Possessive) / the one that (Substitution) / Explaining (Nominalizer)",
+    "explanation": "Possession/Modification: The most common use is connecting two nouns where the first noun (A) modifies the second noun (B), often indicating possession (A's B). Substitution: It can replace a noun when that noun is clear from context, meaning 'the one.' Nominalizer: It turns verbs or phrases into nouns (as seen in no ga suki/heta).",
+    "mastery_level": 0
+  },
+  {
+    "grammar_point": "〜も (mo)",
+    "jlpt_level": "N5",
+    "meaning": "Also / too / both A and B / neither A nor B",
+    "explanation": "The particle も (mo) is primarily used to mean 'too' or 'also' and can replace the subject particle が (ga) or the topic particle は (wa). Affirmative: Used to include the noun/phrase in a category ('A, too'). Negative (Strong): When paired with question words (like dare mo, nani mo, doko mo) and a negative verb, it means 'no one/nothing/nowhere.' Repetitive: Used multiple times to mean 'both A and B.'",
+    "mastery_level": 0
+  },
+  {
+    "grammar_point": "〜を (o / wo)",
+    "jlpt_level": "N5",
+    "meaning": "Direct Object Marker",
+    "explanation": "The particle を (wo) marks the direct object of a transitive verb (a verb that acts upon something). It indicates the thing that receives the action. Although written with the hiragana を (wo), it is always pronounced simply as o when used as a particle. It can also be used with verbs of movement to mark the area/path being traversed.",
+    "mastery_level": 0
+  },
+  {
+    "grammar_point": "〜が (ga)",
+    "jlpt_level": "N5",
+    "meaning": "Subject Marker",
+    "explanation": "The particle が (ga) marks the grammatical subject of the sentence. While は (wa) marks the topic (the thing being talked about), が (ga) identifies the doer of the action or the thing that possesses the state, particularly when: The subject is new information or being specified. Used with verbs expressing existence (iru/aru) or potential (dekiru/wakaru). Used with adjectives expressing feelings, desires, or capabilities (suki, kirai, hoshii).",
+    "mastery_level": 0
+  }
+]

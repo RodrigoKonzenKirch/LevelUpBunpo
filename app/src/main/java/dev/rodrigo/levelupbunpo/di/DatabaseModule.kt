@@ -38,10 +38,10 @@ object DatabaseModule {
         gson: Gson
     ): LevelUpBunpoDatabase {
         return Room.databaseBuilder(
-            context,
-            LevelUpBunpoDatabase::class.java,
-            "levelupbunpo-db"
-        ).fallbackToDestructiveMigration()
+                context,
+                LevelUpBunpoDatabase::class.java,
+                "levelupbunpo-db"
+            ).fallbackToDestructiveMigration(true)
          .addCallback(object : RoomDatabase.Callback() {
              override fun onCreate(db: SupportSQLiteDatabase) {
                  super.onCreate(db)

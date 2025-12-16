@@ -23,7 +23,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "dev.rodrigo.levelupbunpo.CustomTestRunner"
     }
 
     buildTypes {
@@ -70,10 +70,20 @@ dependencies {
 
 
     testImplementation(libs.junit)
+
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation (libs.truth)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    androidTestImplementation(libs.hilt.android.testing)
+    kspAndroidTest(libs.hilt.compiler)
+    androidTestImplementation(libs.androidx.room.testing)
+    androidTestImplementation (libs.truth)
+    androidTestImplementation (libs.mockk.android)
+
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }

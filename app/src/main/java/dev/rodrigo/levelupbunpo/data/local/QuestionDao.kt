@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface QuestionDao {
@@ -12,5 +13,5 @@ interface QuestionDao {
     suspend fun insertAll(questions: List<Question>)
 
     @Query("SELECT * FROM questions")
-    suspend fun getAllQuestions(): List<Question>
+    fun getAllQuestions(): Flow<List<Question>>
 }

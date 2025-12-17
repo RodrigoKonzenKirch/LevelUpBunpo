@@ -41,40 +41,40 @@ object DatabaseModule {
                 context,
                 LevelUpBunpoDatabase::class.java,
                 "levelupbunpo-db"
-            ).fallbackToDestructiveMigration(true)
-         .addCallback(object : RoomDatabase.Callback() {
-             override fun onCreate(db: SupportSQLiteDatabase) {
-                 super.onCreate(db)
-                 CoroutineScope(Dispatchers.IO).launch {
-                    // prepopulate grammar
-                    val grammarInputStream = context.resources.openRawResource(R.raw.grammar)
-                    val grammarReader = InputStreamReader(grammarInputStream)
-                    val grammarPointListType = object : TypeToken<List<GrammarPoint>>() {}.type
-                    val grammarPoints: List<GrammarPoint> = gson.fromJson(grammarReader, grammarPointListType)
-                    grammarDaoProvider.get().insertAll(grammarPoints)
+            ).fallbackToDestructiveMigration(false)
+            .addCallback(object : RoomDatabase.Callback() {
+                override fun onCreate(db: SupportSQLiteDatabase) {
+                    super.onCreate(db)
+                    CoroutineScope(Dispatchers.IO).launch {
+                        // Prepopulate grammar
+                        val grammarInputStream = context.resources.openRawResource(R.raw.grammar)
+                        val grammarReader = InputStreamReader(grammarInputStream)
+                        val grammarPointListType = object : TypeToken<List<GrammarPoint>>() {}.type
+                        val grammarPoints: List<GrammarPoint> = gson.fromJson(grammarReader, grammarPointListType)
+                        grammarDaoProvider.get().insertAll(grammarPoints)
 
-                    // prepopulate questions
-                    val questionInputStream = context.resources.openRawResource(R.raw.questions)
-                    val questionReader = InputStreamReader(questionInputStream)
-                    val questionDataListType = object : TypeToken<List<QuestionData>>() {}.type
-                    val questionData: List<QuestionData> = gson.fromJson(questionReader, questionDataListType)
-                    val questions = questionData.map {
-                        Question(
-                            grammarPointId = it.grammar_point_id,
-                            japaneseQuestion = it.japanese_question,
-                            correctOption = it.correct_option,
-                            incorrectOptionOne = it.Incorrect_option_one,
-                            incorrectOptionTwo = it.Incorrect_option_two,
-                            incorrectOptionThree = it.Incorrect_option_three,
-                            japaneseAnswer = it.japanese_answer,
-                            englishTranslation = it.english_translation
-                        )
+                        // Prepopulate questions
+                        val questionInputStream = context.resources.openRawResource(R.raw.questions)
+                        val questionReader = InputStreamReader(questionInputStream)
+                        val questionDataListType = object : TypeToken<List<QuestionData>>() {}.type
+                        val questionData: List<QuestionData> = gson.fromJson(questionReader, questionDataListType)
+                        val questions = questionData.map {
+                            Question(
+                                grammarPointId = it.grammarPointId,
+                                japaneseQuestion = it.japaneseQuestion,
+                                correctOption = it.correctOption,
+                                incorrectOptionOne = it.incorrectOptionOne,
+                                incorrectOptionTwo = it.incorrectOptionTwo,
+                                incorrectOptionThree = it.incorrectOptionThree,
+                                japaneseAnswer = it.japaneseAnswer,
+                                englishTranslation = it.englishTranslation
+                            )
+                        }
+                        questionDaoProvider.get().insertAll(questions)
                     }
-                    questionDaoProvider.get().insertAll(questions)
-                 }
-             }
-         })
-        .build()
+                }
+            })
+            .build()
     }
 
     @Provides

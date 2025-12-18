@@ -60,14 +60,14 @@ object DatabaseModule {
                         val questionData: List<QuestionData> = gson.fromJson(questionReader, questionDataListType)
                         val questions = questionData.map {
                             Question(
-                                grammarPointId = it.grammar_point_id,
-                                japaneseQuestion = it.japanese_question,
-                                correctOption = it.correct_option,
-                                incorrectOptionOne = it.incorrect_option_one,
-                                incorrectOptionTwo = it.incorrect_option_two,
-                                incorrectOptionThree = it.incorrect_option_three,
-                                japaneseAnswer = it.japanese_answer,
-                                englishTranslation = it.english_translation
+                                grammarPointId = it.grammarPointId,
+                                japaneseQuestion = it.japaneseQuestion,
+                                correctOption = it.correctOption,
+                                incorrectOptionOne = it.incorrectOptionOne,
+                                incorrectOptionTwo = it.incorrectOptionTwo,
+                                incorrectOptionThree = it.incorrectOptionThree,
+                                japaneseAnswer = it.japaneseAnswer,
+                                englishTranslation = it.englishTranslation
                             )
                         }
                         questionDaoProvider.get().insertAll(questions)

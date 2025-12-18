@@ -1,4 +1,4 @@
-package dev.rodrigo.levelupbunpo.data.repository
+package dev.rodrigo.levelupbunpo.domain
 
 import dev.rodrigo.levelupbunpo.data.local.Question
 import kotlinx.coroutines.flow.Flow

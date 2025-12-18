@@ -1,7 +1,7 @@
 package dev.rodrigo.levelupbunpo.domain.usecase
 
 import dev.rodrigo.levelupbunpo.data.local.Question
-import dev.rodrigo.levelupbunpo.data.repository.QuestionRepository
+import dev.rodrigo.levelupbunpo.domain.QuestionRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

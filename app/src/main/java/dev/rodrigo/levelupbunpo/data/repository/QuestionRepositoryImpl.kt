@@ -2,6 +2,7 @@ package dev.rodrigo.levelupbunpo.data.repository
 
 import dev.rodrigo.levelupbunpo.data.local.Question
 import dev.rodrigo.levelupbunpo.data.local.QuestionDao
+import dev.rodrigo.levelupbunpo.domain.QuestionRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

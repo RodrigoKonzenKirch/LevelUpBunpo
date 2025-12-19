@@ -3,6 +3,7 @@ package dev.rodrigo.levelupbunpo.data.repository
 import dev.rodrigo.levelupbunpo.data.local.GrammarPoint
 import dev.rodrigo.levelupbunpo.data.local.GrammarPointDao
 import dev.rodrigo.levelupbunpo.domain.GrammarRepository
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GrammarRepositoryImpl @Inject constructor(
@@ -13,7 +14,7 @@ class GrammarRepositoryImpl @Inject constructor(
         grammarPointDao.insertAll(grammarPoints)
     }
 
-    override suspend fun getAllGrammarPoints(): List<GrammarPoint> {
+    override fun getAllGrammarPoints(): Flow<List<GrammarPoint>> {
         return grammarPointDao.getAllGrammarPoints()
     }
 }

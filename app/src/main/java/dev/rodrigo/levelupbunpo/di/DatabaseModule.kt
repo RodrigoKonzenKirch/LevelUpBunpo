@@ -67,7 +67,8 @@ object DatabaseModule {
                                 incorrectOptionTwo = it.incorrectOptionTwo,
                                 incorrectOptionThree = it.incorrectOptionThree,
                                 japaneseAnswer = it.japaneseAnswer,
-                                englishTranslation = it.englishTranslation
+                                englishTranslation = it.englishTranslation,
+                                mastery = 0
                             )
                         }
                         questionDaoProvider.get().insertAll(questions)

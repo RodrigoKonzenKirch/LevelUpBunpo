@@ -12,6 +12,6 @@ interface GrammarPointDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(grammarPoints: List<GrammarPoint>)
 
-    @Query("SELECT * FROM grammar_points")
+    @Query("SELECT * FROM grammar")
     fun getAllGrammarPoints(): Flow<List<GrammarPoint>>
 }

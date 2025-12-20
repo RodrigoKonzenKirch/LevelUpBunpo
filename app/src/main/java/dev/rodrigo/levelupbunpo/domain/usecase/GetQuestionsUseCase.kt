@@ -5,7 +5,7 @@ import dev.rodrigo.levelupbunpo.domain.QuestionRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetRandomQuestionUseCase @Inject constructor(
+class GetQuestionsUseCase @Inject constructor(
     private val questionRepository: QuestionRepository
 ) {
     operator fun invoke(): Flow<List<Question>> {

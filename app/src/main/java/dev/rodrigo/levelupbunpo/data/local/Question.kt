@@ -36,5 +36,7 @@ data class Question(
     @ColumnInfo(name = "japanese_answer")
     val japaneseAnswer: String,
     @ColumnInfo(name = "english_translation")
-    val englishTranslation: String
+    val englishTranslation: String,
+    @ColumnInfo(name = "mastery_level")
+    val mastery: Int
 )

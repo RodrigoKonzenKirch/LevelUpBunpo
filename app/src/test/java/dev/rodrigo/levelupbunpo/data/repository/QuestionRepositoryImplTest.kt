@@ -61,4 +61,19 @@ class QuestionRepositoryImplTest {
         // Assert
         coVerify { questionDao.insertAll(questionsToInsert) }
     }
+
+    @Test
+    fun `updateMastery calls dao with correct parameters`() = runTest {
+        // Arrange
+        val questionId = 1
+        val newMasteryLevel = 2
+        coEvery { questionDao.updateMastery(questionId, newMasteryLevel) } returns Unit // Stub the suspend function
+
+        // Act
+        repository.updateMastery(questionId, newMasteryLevel)
+
+        // Assert
+        coVerify { questionDao.updateMastery(questionId, newMasteryLevel) }
+
+    }
 }

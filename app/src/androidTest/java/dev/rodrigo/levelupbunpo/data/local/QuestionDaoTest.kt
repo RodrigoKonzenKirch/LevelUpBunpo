@@ -152,4 +152,43 @@ class QuestionDaoTest {
         assertThat(result.first()).isEqualTo(updatedQuestion)
     }
 
+    @Test
+    fun updateMastery_updatesTheCorrectQuestion() = runTest {
+        // Arrange
+        val grammarPoint = GrammarPoint(
+            id = 1,
+            grammar = "g1",
+            jlpt = "N5",
+            meaning = "m1",
+            explanation = "teste",
+            mastery = 0
+        )
+        grammarDao.insertAll(listOf(grammarPoint))
+
+        val question = Question(
+            id = 1,
+            grammarPointId = 1,
+            japaneseQuestion = "Question 1",
+            englishTranslation = "Translation",
+            japaneseAnswer = "Answer",
+            correctOption = "Option 1",
+            incorrectOptionOne = "Option 2",
+            incorrectOptionTwo = "Option 3",
+            incorrectOptionThree = "Option 4",
+            mastery = 1
+        )
+        dao.insertAll(listOf(question))
+        val newMasteryLevel = 2
+
+        // Act
+        dao.updateMastery(questionId = question.id, mastery = newMasteryLevel)
+        val result = dao.getAllQuestions().first()
+
+        // Assert
+        assertThat(result).hasSize(1)
+        assertThat(result.first().mastery).isEqualTo(newMasteryLevel)
+        assertThat(result.first().id).isEqualTo(question.id)
+
+    }
+
 }

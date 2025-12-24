@@ -17,4 +17,9 @@ class QuestionRepositoryImpl @Inject constructor(
     override fun getAllQuestions(): Flow<List<Question>> {
         return questionDao.getAllQuestions()
     }
+
+    override suspend fun updateMastery(questionId: Int, mastery: Int) {
+        questionDao.updateMastery(questionId, mastery)
+    }
+
 }

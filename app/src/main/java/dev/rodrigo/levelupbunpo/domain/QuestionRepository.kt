@@ -6,4 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface QuestionRepository {
     suspend fun insertAll(questions: List<Question>)
     fun getAllQuestions(): Flow<List<Question>>
+
+    suspend fun updateMastery(questionId: Int, mastery: Int)
 }

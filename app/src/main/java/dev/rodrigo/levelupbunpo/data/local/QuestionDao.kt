@@ -14,4 +14,7 @@ interface QuestionDao {
 
     @Query("SELECT * FROM questions")
     fun getAllQuestions(): Flow<List<Question>>
+
+    @Query("UPDATE questions SET mastery_level = :mastery WHERE id = :questionId")
+    suspend fun updateMastery(questionId: Int, mastery: Int)
 }

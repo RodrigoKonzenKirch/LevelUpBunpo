@@ -1,5 +1,6 @@
 package dev.rodrigo.levelupbunpo.di
 
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -15,6 +16,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import javax.inject.Inject
+import android.content.Context
 
 @RunWith(AndroidJUnit4::class)
 @HiltAndroidTest
@@ -33,6 +35,8 @@ class DatabaseModuleTest {
 
     @Before
     fun setup() {
+        // Deletes the old DB file before the test runs.
+        ApplicationProvider.getApplicationContext<Context>().deleteDatabase("levelupbunpo-db")
         hiltRule.inject()
     }
 
@@ -46,8 +50,8 @@ class DatabaseModuleTest {
         // Arrange: Hilt's setup automatically triggers the database creation and the pre-population callback.
 
         // Act: We query the DAOs to see if the data is there.
-        val grammarPoints = grammarPointDao.getAllGrammarPoints().first()
-        val questions = questionDao.getAllQuestions().first()
+        val grammarPoints = grammarPointDao.getAllGrammarPoints().first{it.isNotEmpty()}
+        val questions = questionDao.getAllQuestions().first{it.isNotEmpty()}
 
         // Assert: Check that the lists are not empty.
         assertThat(db.isOpen).isTrue()

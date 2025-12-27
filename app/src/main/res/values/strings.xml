@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Level Up Bunpo</string>
+    <string name="next_question_Button">Next Question</string>
+    <string name="grammar_quiz_title_text">Grammar Quiz</string>
+    <string name="optionbutton_tag">optionButton</string>
+    <string name="hinttoggle_tag">hintToggle</string>
+    <string name="start_quiz_welcome_screen">Start Quiz</string>
+    <string name="hide_english_translation_text">Hide English Translation</string>
+    <string name="show_english_translation_text">Show English Translation</string>
+    <string name="english_hint_translation_tag">englishHintTranslation</string>
+    <string name="welcome_message_welcome_screen">Welcome to Level Up Bunpo!</string>
+    <string name="grammar_point_text">Grammar Point: %1$s</string>
+    <string name="mastery_level">Mastery Level: %1$d/%2$d</string>
+    <string name="correct_answer_message">Correct!</string>
+    <string name="incorrect_answer_message">Wrong!</string>
+    <string name="answer_result_animation_label">AnswerResultAnimation</string>
 </resources>

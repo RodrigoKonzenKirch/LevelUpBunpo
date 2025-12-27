@@ -32,11 +32,13 @@ class DatabaseModuleTest {
     @Inject
     lateinit var questionDao: QuestionDao
 
+    private val databaseName = "levelupbunpo-db"
+
 
     @Before
     fun setup() {
         // Deletes the old DB file before the test runs.
-        ApplicationProvider.getApplicationContext<Context>().deleteDatabase("levelupbunpo-db")
+        ApplicationProvider.getApplicationContext<Context>().deleteDatabase(databaseName)
         hiltRule.inject()
     }
 

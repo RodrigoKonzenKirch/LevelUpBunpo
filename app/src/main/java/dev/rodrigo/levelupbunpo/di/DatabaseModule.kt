@@ -29,6 +29,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object DatabaseModule {
 
+    private const val DATABASE_NAME = "levelupbunpo-db"
+
     @Provides
     @Singleton
     fun provideDatabase(
@@ -40,7 +42,7 @@ object DatabaseModule {
         return Room.databaseBuilder(
                 context,
                 LevelUpBunpoDatabase::class.java,
-                "levelupbunpo-db"
+            DATABASE_NAME
             ).fallbackToDestructiveMigration(false)
             .addCallback(object : RoomDatabase.Callback() {
                 override fun onCreate(db: SupportSQLiteDatabase) {

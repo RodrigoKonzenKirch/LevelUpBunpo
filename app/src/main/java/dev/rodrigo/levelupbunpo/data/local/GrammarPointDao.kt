@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface GrammarPointDao {
@@ -11,6 +12,6 @@ interface GrammarPointDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(grammarPoints: List<GrammarPoint>)
 
-    @Query("SELECT * FROM grammar_points")
-    suspend fun getAllGrammarPoints(): List<GrammarPoint>
+    @Query("SELECT * FROM grammar")
+    fun getAllGrammarPoints(): Flow<List<GrammarPoint>>
 }

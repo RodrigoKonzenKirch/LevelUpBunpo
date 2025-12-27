@@ -2,6 +2,8 @@ package dev.rodrigo.levelupbunpo.data.repository
 
 import dev.rodrigo.levelupbunpo.data.local.Question
 import dev.rodrigo.levelupbunpo.data.local.QuestionDao
+import dev.rodrigo.levelupbunpo.domain.QuestionRepository
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class QuestionRepositoryImpl @Inject constructor(
@@ -12,7 +14,12 @@ class QuestionRepositoryImpl @Inject constructor(
         questionDao.insertAll(questions)
     }
 
-    override suspend fun getAllQuestions(): List<Question> {
+    override fun getAllQuestions(): Flow<List<Question>> {
         return questionDao.getAllQuestions()
     }
+
+    override suspend fun updateMastery(questionId: Int, mastery: Int) {
+        questionDao.updateMastery(questionId, mastery)
+    }
+
 }

@@ -4,18 +4,18 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "grammar_points")
+@Entity(tableName = "grammar")
 data class GrammarPoint(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     @ColumnInfo(name = "grammar_point")
-    val grammarPoint: String,
-    @ColumnInfo(name = "jlpt_level")
-    val jlptLevel: String,
+    val grammar: String?,
+    @ColumnInfo(name = "jlpt")
+    val jlpt: String?,
     @ColumnInfo(name = "meaning")
-    val meaning: String,
+    val meaning: String?,
     @ColumnInfo(name = "explanation")
-    val explanation: String,
+    val explanation: String?,
     @ColumnInfo(name = "mastery_level")
-    val masteryLevel: Int
+    val mastery: Int
 )

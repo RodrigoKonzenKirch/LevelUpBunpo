@@ -19,7 +19,8 @@ import dev.rodrigo.levelupbunpo.R
 @Composable
 fun WelcomeScreen(
     modifier: Modifier = Modifier,
-    onStartQuiz: () -> Unit
+    onStartQuiz: () -> Unit,
+    onShowAchievements: () -> Unit
 ) {
     Column(
         modifier = modifier.fillMaxSize(),
@@ -40,6 +41,19 @@ fun WelcomeScreen(
         ) {
             Text(
                 text = stringResource(R.string.start_quiz_welcome_screen),
+                style = MaterialTheme.typography.titleLarge
+            )
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = onShowAchievements,
+            modifier = Modifier
+                .height(56.dp)
+                .width(256.dp),
+            shape = MaterialTheme.shapes.large
+        ) {
+            Text(
+                text = "View Achievements",
                 style = MaterialTheme.typography.titleLarge
             )
         }

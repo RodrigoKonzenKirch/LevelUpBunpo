@@ -14,4 +14,7 @@
     <string name="correct_answer_message">Correct!</string>
     <string name="incorrect_answer_message">Wrong!</string>
     <string name="answer_result_animation_label">AnswerResultAnimation</string>
+    <string name="total_mastery_title">Total Mastery</string>
+    <string name="grammar_points_title">Grammar Points</string>
+    <string name="mastery_progress_text">%1$d / %2$d</string>
 </resources>

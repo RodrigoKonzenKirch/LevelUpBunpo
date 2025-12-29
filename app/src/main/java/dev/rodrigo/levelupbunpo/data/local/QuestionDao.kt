@@ -17,4 +17,20 @@ interface QuestionDao {
 
     @Query("UPDATE questions SET mastery_level = :mastery WHERE id = :questionId")
     suspend fun updateMastery(questionId: Int, mastery: Int)
+
+    @Query("SELECT SUM(mastery_level) FROM questions")
+    fun getTotalMastery(): Flow<Int?>
+
+    @Query("SELECT COUNT(id) FROM questions")
+    fun getQuestionCount(): Flow<Int>
+
+    @Query("""
+        SELECT
+            grammar_point_id,
+            SUM(mastery_level) as current_mastery,
+            COUNT(id) as question_count
+        FROM questions
+        GROUP BY grammar_point_id
+    """)
+    fun getMasteryForAllGrammarPoints(): Flow<List<GrammarPointMastery>>
 }

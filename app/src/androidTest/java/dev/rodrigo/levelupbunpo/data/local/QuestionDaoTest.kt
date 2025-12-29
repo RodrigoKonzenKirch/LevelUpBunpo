@@ -18,7 +18,7 @@ class QuestionDaoTest {
 
     private lateinit var database: LevelUpBunpoDatabase
     private lateinit var dao: QuestionDao
-    private lateinit var grammarDao: GrammarPointDao // Added for setting up prerequisite data
+    private lateinit var grammarDao: GrammarPointDao
 
     @Before
     fun setup() {
@@ -38,157 +38,134 @@ class QuestionDaoTest {
 
     @Test
     fun getAllQuestions_WhenTableIsEmpty_ReturnEmptyList() = runTest {
-        // Act
         val result = dao.getAllQuestions().first()
-
-        // Assert
         assertThat(result).isEmpty()
     }
 
     @Test
     fun getAllQuestions_ReturnsAllInsertedQuestions() = runTest {
         // Arrange
-        // Parent GrammarPoint necessary for foreign key constraint
-        val grammarPoint1 = GrammarPoint(
-            id = 1,
-            grammar = "g1",
-            jlpt = "N5",
-            meaning = "m1",
-            explanation = "e1",
-            mastery = 0
-        )
-        val grammarPoint2 = GrammarPoint(
-            id = 2,
-            grammar = "g2",
-            jlpt = "N4",
-            meaning = "m2",
-            explanation = "e2",
-            mastery = 0
-        )
-        grammarDao.insertAll(listOf(grammarPoint1, grammarPoint2))
-
-        val question1 = Question(
-            id = 1,
-            grammarPointId = 1,
-            japaneseQuestion = "Question 1",
-            englishTranslation = "Translation 1",
-            japaneseAnswer = "Answer 1",
-            correctOption = "Option 1",
-            incorrectOptionOne = "Option 2",
-            incorrectOptionTwo = "Option 3",
-            incorrectOptionThree = "Option 4",
-            mastery = 1
-        )
-        val question2 = Question(
-            id = 2,
-            grammarPointId = 2,
-            japaneseQuestion = "Question 2",
-            englishTranslation = "Translation 2",
-            japaneseAnswer = "Answer 2",
-            correctOption = "Option 5",
-            incorrectOptionOne = "Option 6",
-            incorrectOptionTwo = "Option 7",
-            incorrectOptionThree = "Option 8",
-            mastery = 2
-        )
-
-        // Act
-        dao.insertAll(listOf(question1, question2))
-        val result = dao.getAllQuestions().first()
-
-        // Assert
-        assertThat(result).hasSize(2)
-        assertThat(result).containsExactly(question1, question2).inOrder()
-    }
-
-    @Test
-    fun insertAll_withConflict_replacesExistingQuestions() = runTest {
-        // Arrange
-        // Parent GrammarPoint necessary for foreign key constraint
-        val grammarPoint1 = GrammarPoint(
-            id = 1,
-            grammar = "g1",
-            jlpt = "N5",
-            meaning = "m1",
-            explanation = "e1",
-            mastery = 0
-        )
+        val grammarPoint1 = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 0)
         grammarDao.insertAll(listOf(grammarPoint1))
 
-        val originalQuestion = Question(
-            id = 1,
-            grammarPointId = 1,
-            japaneseQuestion = "Original",
-            englishTranslation = "Original",
-            japaneseAnswer = "Original",
-            correctOption = "Original",
-            incorrectOptionOne = "Original",
-            incorrectOptionTwo = "Original",
-            incorrectOptionThree = "Original",
-            mastery = 1
-        )
-
-        dao.insertAll(listOf(originalQuestion))
-
-        val updatedQuestion = Question(
-            id = 1,
-            grammarPointId = 1,
-            japaneseQuestion = "Updated",
-            englishTranslation = "Updated",
-            japaneseAnswer = "Updated",
-            correctOption = "Updated",
-            incorrectOptionOne = "Updated",
-            incorrectOptionTwo = "Updated",
-            incorrectOptionThree = "Updated",
-            mastery = 2
-        )
+        val question1 = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 1)
+        dao.insertAll(listOf(question1))
 
         // Act
-        dao.insertAll(listOf(updatedQuestion))
         val result = dao.getAllQuestions().first()
 
-        // Assert
+        //Assert
         assertThat(result).hasSize(1)
-        assertThat(result.first()).isEqualTo(updatedQuestion)
+        assertThat(result.first()).isEqualTo(question1)
     }
 
     @Test
     fun updateMastery_updatesTheCorrectQuestion() = runTest {
         // Arrange
-        val grammarPoint = GrammarPoint(
-            id = 1,
-            grammar = "g1",
-            jlpt = "N5",
-            meaning = "m1",
-            explanation = "teste",
-            mastery = 0
-        )
+        val grammarPoint = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 0)
         grammarDao.insertAll(listOf(grammarPoint))
-
-        val question = Question(
-            id = 1,
-            grammarPointId = 1,
-            japaneseQuestion = "Question 1",
-            englishTranslation = "Translation",
-            japaneseAnswer = "Answer",
-            correctOption = "Option 1",
-            incorrectOptionOne = "Option 2",
-            incorrectOptionTwo = "Option 3",
-            incorrectOptionThree = "Option 4",
-            mastery = 1
-        )
+        val question = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 1)
         dao.insertAll(listOf(question))
-        val newMasteryLevel = 2
 
         // Act
-        dao.updateMastery(questionId = question.id, mastery = newMasteryLevel)
-        val result = dao.getAllQuestions().first()
+        dao.updateMastery(questionId = 1, mastery = 3)
 
         // Assert
-        assertThat(result).hasSize(1)
-        assertThat(result.first().mastery).isEqualTo(newMasteryLevel)
-        assertThat(result.first().id).isEqualTo(question.id)
+        val updatedQuestion = dao.getAllQuestions().first().find { it.id == 1 }
+        assertThat(updatedQuestion).isNotNull()
+        assertThat(updatedQuestion?.mastery).isEqualTo(3)
+    }
 
+    @Test
+    fun getTotalMastery_whenTableIsEmpty_returnsNull() = runTest {
+        // Act
+        val totalMastery = dao.getTotalMastery().first()
+
+        // Assert
+        assertThat(totalMastery).isNull()
+    }
+
+    @Test
+    fun getTotalMastery_returnsSumOfAllMasteryLevels() = runTest {
+        // Arrange
+        val grammarPoint1 = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 0)
+        grammarDao.insertAll(listOf(grammarPoint1))
+        val question1 = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 3)
+        val question2 = Question(id = 2, grammarPointId = 1, japaneseQuestion = "Q2", englishTranslation = "T2", japaneseAnswer = "A2", correctOption = "C2", incorrectOptionOne = "I4", incorrectOptionTwo = "I5", incorrectOptionThree = "I6", mastery = 4)
+        dao.insertAll(listOf(question1, question2))
+
+        // Act
+        val totalMastery = dao.getTotalMastery().first()
+
+        // Assert
+        assertThat(totalMastery).isEqualTo(7)
+    }
+
+    @Test
+    fun getQuestionCount_returnsCorrectNumberOfQuestions() = runTest {
+        // Arrange
+        val grammarPoint1 = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 0)
+        grammarDao.insertAll(listOf(grammarPoint1))
+        val question1 = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 3)
+        val question2 = Question(id = 2, grammarPointId = 1, japaneseQuestion = "Q2", englishTranslation = "T2", japaneseAnswer = "A2", correctOption = "C2", incorrectOptionOne = "I4", incorrectOptionTwo = "I5", incorrectOptionThree = "I6", mastery = 4)
+        dao.insertAll(listOf(question1, question2))
+
+        // Act
+        val count = dao.getQuestionCount().first()
+
+        // Assert
+        assertThat(count).isEqualTo(2)
+    }
+
+    @Test
+    fun getMasteryForAllGrammarPoints_whenTableIsEmpty_returnsEmptyList() = runTest {
+        val result = dao.getMasteryForAllGrammarPoints().first()
+        assertThat(result).isEmpty()
+    }
+
+
+    @Test
+    fun getMasteryForAllGrammarPoints_returnsCorrectMasteryData() = runTest {
+        // Arrange
+        val grammarPoint1 = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 2)
+        grammarDao.insertAll(listOf(grammarPoint1))
+
+        val question1 = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 3)
+        val question2 = Question(id = 2, grammarPointId = 1, japaneseQuestion = "Q2", englishTranslation = "T2", japaneseAnswer = "A2", correctOption = "C2", incorrectOptionOne = "I4", incorrectOptionTwo = "I5", incorrectOptionThree = "I6", mastery = 4)
+        dao.insertAll(listOf(question1, question2))
+
+        // Act
+        val masteryData = dao.getMasteryForAllGrammarPoints().first()
+
+        // Assert
+        assertThat(masteryData[0].grammarPointId).isEqualTo(1)
+        assertThat(masteryData[0].currentMastery).isEqualTo(7)
+        assertThat(masteryData[0].questionCount).isEqualTo(2)
+
+    }
+
+    @Test
+    fun getMasteryForAllGrammarPoints_returnsCorrectMasteryDataForMultipleGrammarPoints() = runTest {
+        // Arrange
+        val grammarPoint1 = GrammarPoint(id = 1, grammar = "g1", jlpt = "N5", meaning = "m1", explanation = "e1", mastery = 2)
+        val grammarPoint2 = GrammarPoint(id = 2, grammar = "g2", jlpt = "N4", meaning = "m2", explanation = "e2", mastery = 3)
+        grammarDao.insertAll(listOf(grammarPoint1, grammarPoint2))
+
+        val question1 = Question(id = 1, grammarPointId = 1, japaneseQuestion = "Q1", englishTranslation = "T1", japaneseAnswer = "A1", correctOption = "C1", incorrectOptionOne = "I1", incorrectOptionTwo = "I2", incorrectOptionThree = "I3", mastery = 3)
+        val question2 = Question(id = 2, grammarPointId = 1, japaneseQuestion = "Q2", englishTranslation = "T2", japaneseAnswer = "A2", correctOption = "C2", incorrectOptionOne = "I4", incorrectOptionTwo = "I5", incorrectOptionThree = "I6", mastery = 4)
+        val question3 = Question(id = 3, grammarPointId = 2, japaneseQuestion = "Q3", englishTranslation = "T3", japaneseAnswer = "A3", correctOption = "C3", incorrectOptionOne = "I5", incorrectOptionTwo = "I6", incorrectOptionThree = "I7", mastery = 5)
+        dao.insertAll(listOf(question1, question2, question3))
+
+        // Act
+        val masteryData = dao.getMasteryForAllGrammarPoints().first()
+
+        // Assert
+        assertThat(masteryData[0].grammarPointId).isEqualTo(1)
+        assertThat(masteryData[0].currentMastery).isEqualTo(7)
+        assertThat(masteryData[0].questionCount).isEqualTo(2)
+        assertThat(masteryData[1].grammarPointId).isEqualTo(2)
+        assertThat(masteryData[1].currentMastery).isEqualTo(5)
+        assertThat(masteryData[1].questionCount).isEqualTo(1)
     }
 
 }

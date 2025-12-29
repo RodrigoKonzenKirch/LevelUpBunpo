@@ -18,7 +18,8 @@ object WelcomeModule {
     fun provideEntryProviderInstaller(navigator: Navigator) : EntryProviderInstaller = {
         entry<Welcome>{
             WelcomeScreen(
-                onStartQuiz = { navigator.goTo(Quiz) }
+                onStartQuiz = { navigator.goTo(Quiz) },
+                onShowAchievements = { navigator.goTo(Achievements) }
             )
         }
     }

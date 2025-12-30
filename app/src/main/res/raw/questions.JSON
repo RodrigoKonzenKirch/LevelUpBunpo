@@ -148,5 +148,1685 @@
     "incorrect_option_three": "と",
     "japanese_answer": "新しい本が欲しいです。",
     "english_translation": "I want a new book."
+  },
+  {
+    "grammar_point_id": 6,
+    "japanese_question": "この時計は高いです_、デザインがいいです。",
+    "correct_option": "が",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "この時計は高いですが、デザインがいいです。",
+    "english_translation": "This watch is expensive, but the design is good."
+  },
+  {
+    "grammar_point_id": 6,
+    "japanese_question": "すみません、質問があります_...",
+    "correct_option": "が",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "も",
+    "incorrect_option_three": "に",
+    "japanese_answer": "すみません、質問がありますが...",
+    "english_translation": "Excuse me, I have a question, but... (leading to the question)"
+  },
+  {
+    "grammar_point_id": 6,
+    "japanese_question": "少し寒いです_、窓を開けておきます。",
+    "correct_option": "が",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "少し寒いですが、窓を開けておきます。",
+    "english_translation": "It's a little cold, but I'll open the window."
+  },
+  {
+    "grammar_point_id": 7,
+    "japanese_question": "これは何です_。",
+    "correct_option": "か",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "も",
+    "japanese_answer": "これは何ですか。",
+    "english_translation": "What is this?"
+  },
+  {
+    "grammar_point_id": 7,
+    "japanese_question": "毎日水を飲みます_？",
+    "correct_option": "か",
+    "incorrect_option_one": "で",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "も",
+    "japanese_answer": "毎日水を飲みますか？",
+    "english_translation": "Do you drink water every day?"
+  },
+  {
+    "grammar_point_id": 7,
+    "japanese_question": "この本は好きです_？",
+    "correct_option": "か",
+    "incorrect_option_one": "で",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "も",
+    "japanese_answer": "この本は好きですか？",
+    "english_translation": "Do you like this book?"
+  },
+  {
+    "grammar_point_id": 8,
+    "japanese_question": "コーヒー_紅茶が飲みたいです。",
+    "correct_option": "か",
+    "incorrect_option_one": "で",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "コーヒーか紅茶が飲みたいです。",
+    "english_translation": "I want to drink coffee or black tea."
+  },
+  {
+    "grammar_point_id": 8,
+    "japanese_question": "赤_青のシャツをお選びください",
+    "correct_option": "か",
+    "incorrect_option_one": "で",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "赤か青のシャツをお選びください",
+    "english_translation": "Choose between a red or blue shirt"
+  },
+  {
+    "grammar_point_id": 8,
+    "japanese_question": "リンゴ_バナナを食べたいです。",
+    "correct_option": "か",
+    "incorrect_option_one": "の",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "リンゴかバナナを食べたいです。",
+    "english_translation": "I want to eat an apple or a banana."
+  },
+  {
+    "grammar_point_id": 9,
+    "japanese_question": "３時_会議があります。",
+    "correct_option": "に",
+    "incorrect_option_one": "へ",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "は",
+    "japanese_answer": "３時に会議があります。",
+    "english_translation": "There is a meeting at 3 o'clock."
+  },
+  {
+    "grammar_point_id": 9,
+    "japanese_question": "私の家_犬がいます。",
+    "correct_option": "に",
+    "incorrect_option_one": "を",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "は",
+    "japanese_answer": "私の家に犬がいます。",
+    "english_translation": "There is a dog at my house."
+  },
+  {
+    "grammar_point_id": 9,
+    "japanese_question": "友達_手紙を書きました。",
+    "correct_option": "に",
+    "incorrect_option_one": "を",
+    "incorrect_option_two": "へ",
+    "incorrect_option_three": "も",
+    "japanese_answer": "友達に手紙を書きました。",
+    "english_translation": "I wrote a letter to my friend."
+  },
+  {
+    "grammar_point_id": 10,
+    "japanese_question": "郵便局_行きます。",
+    "correct_option": "へ",
+    "incorrect_option_one": "を",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "郵便局へ行きます。",
+    "english_translation": "I am going to the post office."
+  },
+  {
+    "grammar_point_id": 10,
+    "japanese_question": "こちら_どうぞ。",
+    "correct_option": "へ",
+    "incorrect_option_one": "を",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "こちらへどうぞ。",
+    "english_translation": "Please come this way. / Please come towards here."
+  },
+  {
+    "grammar_point_id": 10,
+    "japanese_question": "東_旅したいです。",
+    "correct_option": "へ",
+    "incorrect_option_one": "を",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "東へ旅したいです。",
+    "english_translation": "I want to travel east."
+  },
+  {
+    "grammar_point_id": 11,
+    "japanese_question": "机の上に本_ノートがあります。",
+    "correct_option": "と",
+    "incorrect_option_one": "へ",
+    "incorrect_option_two": "を",
+    "incorrect_option_three": "は",
+    "japanese_answer": "机の上に本とノートがあります。",
+    "english_translation": "There are books and notebooks on the desk."
+  },
+  {
+    "grammar_point_id": 11,
+    "japanese_question": "友達_映画を見に行きました。",
+    "correct_option": "と",
+    "incorrect_option_one": "が",
+    "incorrect_option_two": "を",
+    "incorrect_option_three": "は",
+    "japanese_answer": "友達と映画を見に行きました。",
+    "english_translation": "I went to see a movie with my friend."
+  },
+  {
+    "grammar_point_id": 11,
+    "japanese_question": "彼女は「さようなら」_言いました。",
+    "correct_option": "と",
+    "incorrect_option_one": "が",
+    "incorrect_option_two": "を",
+    "incorrect_option_three": "に",
+    "japanese_answer": "彼女は「さようなら」と言いました。",
+    "english_translation": "She said, \"Goodbye.\""
+  },
+  {
+    "grammar_point_id": 12,
+    "japanese_question": "カバンの中に本_ペンがあります。",
+    "correct_option": "や",
+    "incorrect_option_one": "の",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "で",
+    "japanese_answer": "カバンの中に本やペンがあります。",
+    "english_translation": "There are books, pens, and such in the bag."
+  },
+  {
+    "grammar_point_id": 12,
+    "japanese_question": "デパートで服_靴などを買いました。",
+    "correct_option": "や",
+    "incorrect_option_one": "の",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "で",
+    "japanese_answer": "デパートで服や靴などを買いました。",
+    "english_translation": "I bought clothes, shoes, and so on at the department store."
+  },
+  {
+    "grammar_point_id": 12,
+    "japanese_question": "東京_大阪に住みたい。",
+    "correct_option": "や",
+    "incorrect_option_one": "は",
+    "incorrect_option_two": "を",
+    "incorrect_option_three": "で",
+    "japanese_answer": "東京や大阪に住みたい。",
+    "english_translation": "I want to live in places like Tokyo and Osaka."
+  },
+  {
+    "grammar_point_id": 13,
+    "japanese_question": "私は図書館_勉強します。",
+    "correct_option": "で",
+    "incorrect_option_one": "や",
+    "incorrect_option_two": "は",
+    "incorrect_option_three": "の",
+    "japanese_answer": "私は図書館で勉強します。",
+    "english_translation": "I study in the library."
+  },
+  {
+    "grammar_point_id": 13,
+    "japanese_question": "公園_走っています。",
+    "correct_option": "で",
+    "incorrect_option_one": "や",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "の",
+    "japanese_answer": "公園で走っています。",
+    "english_translation": "I am running in the park."
+  },
+  {
+    "grammar_point_id": 13,
+    "japanese_question": "東京_オリンピックがありました。",
+    "correct_option": "で",
+    "incorrect_option_one": "や",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "東京でオリンピックがありました。",
+    "english_translation": "The Olympics were held in Tokyo."
+  },
+  {
+    "grammar_point_id": 14,
+    "japanese_question": "箸_ご飯を食べます。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "箸でご飯を食べます。",
+    "english_translation": "I eat rice with chopsticks."
+  },
+  {
+    "grammar_point_id": 14,
+    "japanese_question": "バス_学校に行きます。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "バスで学校に行きます。",
+    "english_translation": "I go to school by bus."
+  },
+  {
+    "grammar_point_id": 14,
+    "japanese_question": "日本語_メールを書きました。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "日本語でメールを書きました。",
+    "english_translation": "I wrote an email in Japanese."
+  },
+  {
+    "grammar_point_id": 15,
+    "japanese_question": "このレポートは二時間_書き終わった。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "このレポートは二時間で書き終わった。",
+    "english_translation": "I finished writing this report in two hours."
+  },
+  {
+    "grammar_point_id": 15,
+    "japanese_question": "千円_昼ごはんが買えます。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "を",
+    "japanese_answer": "千円で昼ごはんが買えます。",
+    "english_translation": "I can buy lunch with 1000 yen."
+  },
+  {
+    "grammar_point_id": 15,
+    "japanese_question": "家族の中_、私が一番背が高いです。",
+    "correct_option": "で",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "が",
+    "incorrect_option_three": "へ",
+    "japanese_answer": "家族の中で、私が一番背が高いです。",
+    "english_translation": "In my family, I am the tallest."
+  },
+  {
+    "grammar_point_id": 16,
+    "japanese_question": "私は田中さん_。",
+    "correct_option": "です",
+    "incorrect_option_one": "のに",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "まだ",
+    "japanese_answer": "私は田中さんです。",
+    "english_translation": "I am Mr./Ms. Tanaka."
+  },
+  {
+    "grammar_point_id": 16,
+    "japanese_question": "このカメラは新しい_。",
+    "correct_option": "です",
+    "incorrect_option_one": "も",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "このカメラは新しいです。",
+    "english_translation": "This camera is new."
+  },
+  {
+    "grammar_point_id": 16,
+    "japanese_question": "あれは何_か。",
+    "correct_option": "です",
+    "incorrect_option_one": "にも",
+    "incorrect_option_two": "へ",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "あれは何ですか。",
+    "english_translation": "What is that?"
+  },
+  {
+    "grammar_point_id": 17,
+    "japanese_question": "今日はいい天気です_。",
+    "correct_option": "ね",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "も",
+    "incorrect_option_three": "と",
+    "japanese_answer": "今日はいい天気ですね。",
+    "english_translation": "It's nice weather today, isn't it?"
+  },
+  {
+    "grammar_point_id": 17,
+    "japanese_question": "明日10時です_。",
+    "correct_option": "ね",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "も",
+    "incorrect_option_three": "と",
+    "japanese_answer": "明日10時ですね。",
+    "english_translation": "It's 10 o'clock tomorrow, right?"
+  },
+  {
+    "grammar_point_id": 17,
+    "japanese_question": "このりんごは美味しい_。",
+    "correct_option": "ね",
+    "incorrect_option_one": "だ",
+    "incorrect_option_two": "も",
+    "incorrect_option_three": "と",
+    "japanese_answer": "このりんごは美味しいね。",
+    "english_translation": "This apple is delicious, (I agree)."
+  },
+  {
+    "grammar_point_id": 18,
+    "japanese_question": "彼女は来ません_。",
+    "correct_option": "よ",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "は",
+    "incorrect_option_three": "も",
+    "japanese_answer": "彼女は来ませんよ。",
+    "english_translation": "She is not coming, (I'm telling you)."
+  },
+  {
+    "grammar_point_id": 18,
+    "japanese_question": "それは危ない_。",
+    "correct_option": "よ",
+    "incorrect_option_one": "は",
+    "incorrect_option_two": "もう",
+    "incorrect_option_three": "へ",
+    "japanese_answer": "それは危ないよ。",
+    "english_translation": "That is dangerous, (be careful)."
+  },
+  {
+    "grammar_point_id": 18,
+    "japanese_question": "このレストランは本当に美味しい_。",
+    "correct_option": "よ",
+    "incorrect_option_one": "へ",
+    "incorrect_option_two": "と",
+    "incorrect_option_three": "で",
+    "japanese_answer": "このレストランは本当に美味しいよ。",
+    "english_translation": "This restaurant is really delicious, (trust me)."
+  },
+  {
+    "grammar_point_id": 19,
+    "japanese_question": "ここでタバコを吸う_。",
+    "correct_option": "な",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "も",
+    "japanese_answer": "ここでタバコを吸うな。",
+    "english_translation": "Don't smoke here."
+  },
+  {
+    "grammar_point_id": 19,
+    "japanese_question": "嘘をつく_！",
+    "correct_option": "な",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "も",
+    "japanese_answer": "嘘をつくな！",
+    "english_translation": "Don't lie!"
+  },
+  {
+    "grammar_point_id": 19,
+    "japanese_question": "触る_。",
+    "correct_option": "な",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "も",
+    "japanese_answer": "触るな。",
+    "english_translation": "Don't touch."
+  },
+  {
+    "grammar_point_id": 20,
+    "japanese_question": "テーブルの上に本が_。",
+    "correct_option": "あります",
+    "incorrect_option_one": "けど",
+    "incorrect_option_two": "です",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "テーブルの上に本があります。",
+    "english_translation": "There is a book on the table."
+  },
+  {
+    "grammar_point_id": 20,
+    "japanese_question": "部屋には椅子が_。",
+    "correct_option": "あります",
+    "incorrect_option_one": "です",
+    "incorrect_option_two": "けど",
+    "incorrect_option_three": "います",
+    "japanese_answer": "部屋には椅子があります。",
+    "english_translation": "There is a chair in the room."
+  },
+  {
+    "grammar_point_id": 20,
+    "japanese_question": "私には夢が_。",
+    "correct_option": "ある",
+    "incorrect_option_one": "いる",
+    "incorrect_option_two": "から",
+    "incorrect_option_three": "でしょう",
+    "japanese_answer": "私には夢がある。",
+    "english_translation": "I have a dream."
+  },
+  {
+    "grammar_point_id": 21,
+    "japanese_question": "部屋に先生が_。",
+    "correct_option": "います",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "あります",
+    "incorrect_option_three": "ありました",
+    "japanese_answer": "部屋に先生がいます。",
+    "english_translation": "There is a teacher in the room."
+  },
+  {
+    "grammar_point_id": 21,
+    "japanese_question": "公園に猫が_か。",
+    "correct_option": "います",
+    "incorrect_option_one": "あります",
+    "incorrect_option_two": "いります",
+    "incorrect_option_three": "です",
+    "japanese_answer": "公園に猫がいますか。",
+    "english_translation": "Is there a cat in the park?"
+  },
+  {
+    "grammar_point_id": 21,
+    "japanese_question": "私には妹が_。",
+    "correct_option": "います",
+    "incorrect_option_one": "あります",
+    "incorrect_option_two": "でしょう",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "私には妹がいます。",
+    "english_translation": "I have a younger sister."
+  },
+  {
+    "grammar_point_id": 22,
+    "japanese_question": "_雨が降っています。",
+    "correct_option": "まだ",
+    "incorrect_option_one": "けど",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "まだ雨が降っています。",
+    "english_translation": "It is still raining."
+  },
+  {
+    "grammar_point_id": 22,
+    "japanese_question": "宿題は_終っていません。",
+    "correct_option": "まだ",
+    "incorrect_option_one": "もう",
+    "incorrect_option_two": "から",
+    "incorrect_option_three": "にも",
+    "japanese_answer": "宿題はまだ終っていません。",
+    "english_translation": "I have not finished my homework yet."
+  },
+  {
+    "grammar_point_id": 22,
+    "japanese_question": "彼は_学生です。",
+    "correct_option": "まだ",
+    "incorrect_option_one": "いる",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "けど",
+    "japanese_answer": "彼はまだ学生です。",
+    "english_translation": "He is still a student."
+  },
+  {
+    "grammar_point_id": 23,
+    "japanese_question": "_ご飯を食べました。",
+    "correct_option": "もう",
+    "incorrect_option_one": "です",
+    "incorrect_option_two": "だけ",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "もうご飯を食べました。",
+    "english_translation": "I already ate a meal."
+  },
+  {
+    "grammar_point_id": 23,
+    "japanese_question": "彼女はここに_住んでいません。",
+    "correct_option": "もう",
+    "incorrect_option_one": "だけ",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "から",
+    "japanese_answer": "彼女はここにもう住んでいません。",
+    "english_translation": "She no longer lives here. / She doesn't live here anymore."
+  },
+  {
+    "grammar_point_id": 23,
+    "japanese_question": "_一杯いかがですか。",
+    "correct_option": "もう",
+    "incorrect_option_one": "も",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "いる",
+    "japanese_answer": "もう一杯いかがですか。",
+    "english_translation": "Would you like one more cup?"
+  },
+  {
+    "grammar_point_id": 24,
+    "japanese_question": "お金が少し_あります。",
+    "correct_option": "だけ",
+    "incorrect_option_one": "もう",
+    "incorrect_option_two": "から",
+    "incorrect_option_three": "いちばん",
+    "japanese_answer": "お金が少しだけあります。",
+    "english_translation": "I only have a little money."
+  },
+  {
+    "grammar_point_id": 24,
+    "japanese_question": "美味しいもの_を食べたいです。",
+    "correct_option": "だけ",
+    "incorrect_option_one": "もう",
+    "incorrect_option_two": "へた",
+    "incorrect_option_three": "から",
+    "japanese_answer": "美味しいものだけを食べたいです。",
+    "english_translation": "I want to eat only delicious things."
+  },
+  {
+    "grammar_point_id": 24,
+    "japanese_question": "休憩は１０分_です。",
+    "correct_option": "だけ",
+    "incorrect_option_one": "もう",
+    "incorrect_option_two": "のに",
+    "incorrect_option_three": "けど",
+    "japanese_answer": "休憩は１０分だけです。",
+    "english_translation": "The break is only 10 minutes."
+  },
+  {
+    "grammar_point_id": 25,
+    "japanese_question": "このケーキは五百円_です。",
+    "correct_option": "ぐらい",
+    "incorrect_option_one": "すぎる",
+    "incorrect_option_two": "だから",
+    "incorrect_option_three": "けど",
+    "japanese_answer": "このケーキは五百円ぐらいです。",
+    "english_translation": "This cake is about 500 yen."
+  },
+  {
+    "grammar_point_id": 25,
+    "japanese_question": "毎日、一時間_日本語を勉強します。",
+    "correct_option": "ぐらい",
+    "incorrect_option_one": "だから",
+    "incorrect_option_two": "もう",
+    "incorrect_option_three": "の",
+    "japanese_answer": "毎日、一時間くらい日本語を勉強します。",
+    "english_translation": "I study Japanese for about an hour every day."
+  },
+  {
+    "grammar_point_id": 25,
+    "japanese_question": "「ありがとう」_は言いなさい。",
+    "correct_option": "ぐらい",
+    "incorrect_option_one": "いる",
+    "incorrect_option_two": "すぎる",
+    "incorrect_option_three": "へた",
+    "japanese_answer": "「ありがとう」ぐらいは言いなさい。",
+    "english_translation": "Say at least \"thank you\"."
+  },
+  {
+    "grammar_point_id": 26,
+    "japanese_question": "このクラスで誰が_背が高いですか。",
+    "correct_option": "いちばん",
+    "incorrect_option_one": "あまり",
+    "incorrect_option_two": "すぎる",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "このクラスで誰がいちばん背が高いですか。",
+    "english_translation": "Who is the tallest in this class?"
+  },
+  {
+    "grammar_point_id": 26,
+    "japanese_question": "私は夏が_好きです。",
+    "correct_option": "いちばん",
+    "incorrect_option_one": "けど",
+    "incorrect_option_two": "あまり",
+    "incorrect_option_three": "いる",
+    "japanese_answer": "私は夏がいちばん好きです。",
+    "english_translation": "I like summer the most."
+  },
+  {
+    "grammar_point_id": 26,
+    "japanese_question": "この都市は世界で_です。",
+    "correct_option": "いちばん",
+    "incorrect_option_one": "あまり",
+    "incorrect_option_two": "すぎる",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "この都市は世界でいちばんです。",
+    "english_translation": "This city is the best in the world."
+  },
+  {
+    "grammar_point_id": 27,
+    "japanese_question": "私は本を読む_です。",
+    "correct_option": "のが好き",
+    "incorrect_option_one": "あまり",
+    "incorrect_option_two": "いちばん",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "私は本を読むのが好きです。",
+    "english_translation": "I like reading books."
+  },
+  {
+    "grammar_point_id": 27,
+    "japanese_question": "私は猫_です。",
+    "correct_option": "が好き",
+    "incorrect_option_one": "だから",
+    "incorrect_option_two": "のに",
+    "incorrect_option_three": "いちばん",
+    "japanese_answer": "私は猫が好きです。",
+    "english_translation": "I like cats."
+  },
+  {
+    "grammar_point_id": 27,
+    "japanese_question": "私は走る_です。",
+    "correct_option": "のが好き",
+    "incorrect_option_one": "好き",
+    "incorrect_option_two": "じょうず",
+    "incorrect_option_three": "まだ",
+    "japanese_answer": "私は走るのが好きです。",
+    "english_translation": "I like running."
+  },
+  {
+    "grammar_point_id": 28,
+    "japanese_question": "彼は歌うのが_です。",
+    "correct_option": "じょうず",
+    "incorrect_option_one": "あまり",
+    "incorrect_option_two": "だから",
+    "incorrect_option_three": "すぎる",
+    "japanese_answer": "彼は歌うのが上手です。",
+    "english_translation": "He is good at singing."
+  },
+  {
+    "grammar_point_id": 28,
+    "japanese_question": "彼女はテニスが_です。",
+    "correct_option": "じょうず",
+    "incorrect_option_one": "あまり",
+    "incorrect_option_two": "いる",
+    "incorrect_option_three": "もう",
+    "japanese_answer": "彼女はテニスが上手です。",
+    "english_translation": "She is good at tennis."
+  },
+  {
+    "grammar_point_id": 28,
+    "japanese_question": "先生は絵がとても_ですね。",
+    "correct_option": "じょうず",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "のが好き",
+    "incorrect_option_three": "まだ",
+    "japanese_answer": "先生は絵がとても上手ですね。",
+    "english_translation": "The teacher is very good at drawing, aren't they?"
+  },
+  {
+    "grammar_point_id": 29,
+    "japanese_question": "私は話すのが_です。",
+    "correct_option": "へた",
+    "incorrect_option_one": "まだ",
+    "incorrect_option_two": "すこし",
+    "incorrect_option_three": "すぎる",
+    "japanese_answer": "私は話すのが下手です。",
+    "english_translation": "I am bad at speaking."
+  },
+  {
+    "grammar_point_id": 29,
+    "japanese_question": "彼は料理が_です。",
+    "correct_option": "へた",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "もう",
+    "incorrect_option_three": "ぐらい",
+    "japanese_answer": "彼は料理が下手です。",
+    "english_translation": "He is bad at cooking."
+  },
+  {
+    "grammar_point_id": 29,
+    "japanese_question": "漢字を書くのが_だった。",
+    "correct_option": "へた",
+    "incorrect_option_one": "もう",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "すこし",
+    "japanese_answer": "漢字を書くのが下手だった。",
+    "english_translation": "I was bad at writing kanji."
+  },
+  {
+    "grammar_point_id": 30,
+    "japanese_question": "私は日本に行き_です。",
+    "correct_option": "たい",
+    "incorrect_option_one": "ます",
+    "incorrect_option_two": "ました",
+    "incorrect_option_three": "いる",
+    "japanese_answer": "私は日本に行きたいです。",
+    "english_translation": "I want to go to Japan."
+  },
+  {
+    "grammar_point_id": 30,
+    "japanese_question": "今日は何も食べ_です。",
+    "correct_option": "たくない",
+    "incorrect_option_one": "ている",
+    "incorrect_option_two": "ます",
+    "incorrect_option_three": "ました",
+    "japanese_answer": "今日は何も食べたくないです。",
+    "english_translation": "I don't want to eat anything today."
+  },
+  {
+    "grammar_point_id": 30,
+    "japanese_question": "あの山に登り_です。",
+    "correct_option": "たい",
+    "incorrect_option_one": "ている",
+    "incorrect_option_two": "ます",
+    "incorrect_option_three": "すぎる",
+    "japanese_answer": "あの山に登りたいです。",
+    "english_translation": "I want to climb that mountain"
+  },
+  {
+    "grammar_point_id": 31,
+    "japanese_question": "来年、車を買う_です。",
+    "correct_option": "つもり",
+    "incorrect_option_one": "たい",
+    "incorrect_option_two": "にも",
+    "incorrect_option_three": "すぎる",
+    "japanese_answer": "来年、車を買うつもりです。",
+    "english_translation": "I plan to buy a car next year."
+  },
+  {
+    "grammar_point_id": 31,
+    "japanese_question": "私はもうお酒を飲まない_です。",
+    "correct_option": "つもり",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "もう",
+    "incorrect_option_three": "たい",
+    "japanese_answer": "私はもうお酒を飲まないつもりです。",
+    "english_translation": "I intend not to drink alcohol anymore."
+  },
+  {
+    "grammar_point_id": 31,
+    "japanese_question": "彼は日本語が話せる_です。",
+    "correct_option": "つもり",
+    "incorrect_option_one": "だけ",
+    "incorrect_option_two": "いる",
+    "incorrect_option_three": "いちばん",
+    "japanese_answer": "彼は日本語が話せるつもりです。",
+    "english_translation": "He believes he can speak Japanese. (Used here to express a perception or belief, often translated as \"thinks he can.\")"
+  },
+  {
+    "grammar_point_id": 32,
+    "japanese_question": "彼は医者に_。",
+    "correct_option": "なりました",
+    "incorrect_option_one": "います",
+    "incorrect_option_two": "あります",
+    "incorrect_option_three": "じょうず",
+    "japanese_answer": "彼は医者になりました。",
+    "english_translation": "He became a doctor."
+  },
+  {
+    "grammar_point_id": 32,
+    "japanese_question": "部屋がきれいに_。",
+    "correct_option": "なった",
+    "incorrect_option_one": "いる",
+    "incorrect_option_two": "います",
+    "incorrect_option_three": "です",
+    "japanese_answer": "部屋がきれいになった。",
+    "english_translation": "The room became clean."
+  },
+  {
+    "grammar_point_id": 32,
+    "japanese_question": "寒く_ね。",
+    "correct_option": "なりました",
+    "incorrect_option_one": "いる",
+    "incorrect_option_two": "います",
+    "incorrect_option_three": "すこし",
+    "japanese_answer": "寒くなりましたね。",
+    "english_translation": "It has gotten cold, hasn't it?"
+  },
+  {
+    "grammar_point_id": 33,
+    "japanese_question": "ここに名前を書い_。",
+    "correct_option": "てください",
+    "incorrect_option_one": "ある",
+    "incorrect_option_two": "なります",
+    "incorrect_option_three": "です",
+    "japanese_answer": "ここに名前を書いてください。",
+    "english_translation": "Please write your name here."
+  },
+  {
+    "grammar_point_id": 33,
+    "japanese_question": "ちょっと手伝っ_。",
+    "correct_option": "てください",
+    "incorrect_option_one": "なります",
+    "incorrect_option_two": "です",
+    "incorrect_option_three": "ている",
+    "japanese_answer": "ちょっと手伝ってください。",
+    "english_translation": "Please help me for a moment."
+  },
+  {
+    "grammar_point_id": 33,
+    "japanese_question": "ゆっくり話し_。",
+    "correct_option": "てください",
+    "incorrect_option_one": "なります",
+    "incorrect_option_two": "です",
+    "incorrect_option_three": "だけ",
+    "japanese_answer": "ゆっくり話してください。",
+    "english_translation": "Please speak slowly."
+  },
+  {
+    "grammar_point_id": 34,
+    "japanese_question": "ここでタバコを吸わ_。",
+    "correct_option": "ないでください",
+    "incorrect_option_one": "ないました",
+    "incorrect_option_two": "ないまで",
+    "incorrect_option_three": "ないけど",
+    "japanese_answer": "ここでタバコを吸わないでください。",
+    "english_translation": "Please don't smoke here."
+  },
+  {
+    "grammar_point_id": 34,
+    "japanese_question": "心配し_。",
+    "correct_option": "ないでください",
+    "incorrect_option_one": "ないました",
+    "incorrect_option_two": "ないが",
+    "incorrect_option_three": "ないけど",
+    "japanese_answer": "心配しないでください。",
+    "english_translation": "Please don't worry."
+  },
+  {
+    "grammar_point_id": 34,
+    "japanese_question": "遅刻し_。",
+    "correct_option": "ないでください",
+    "incorrect_option_one": "ないました",
+    "incorrect_option_two": "ないまでです",
+    "incorrect_option_three": "ないけど",
+    "japanese_answer": "遅刻しないでください。",
+    "english_translation": "Please don't be late."
+  },
+  {
+    "grammar_point_id": 35,
+    "japanese_question": "ここに座っ_か。",
+    "correct_option": "てもいいです",
+    "incorrect_option_one": "てもないです",
+    "incorrect_option_two": "てもまでです",
+    "incorrect_option_three": "てもました",
+    "japanese_answer": "ここに座ってもいいですか。",
+    "english_translation": "May I sit here?"
+  },
+  {
+    "grammar_point_id": 35,
+    "japanese_question": "このペンを使っ_か。",
+    "correct_option": "てもいいです",
+    "incorrect_option_one": "てもないです",
+    "incorrect_option_two": "てもまだです",
+    "incorrect_option_three": "てももうです",
+    "japanese_answer": "このペンを使ってもいいですか。",
+    "english_translation": "May I use this pen?"
+  },
+  {
+    "grammar_point_id": 35,
+    "japanese_question": "明日帰っ_か。",
+    "correct_option": "てもいいです",
+    "incorrect_option_one": "てもないです",
+    "incorrect_option_two": "てもです",
+    "incorrect_option_three": "てもだから",
+    "japanese_answer": "明日帰ってもいいですか。",
+    "english_translation": "Is it okay if I go home tomorrow?"
+  },
+  {
+    "grammar_point_id": 36,
+    "japanese_question": "ここで写真を撮っ_です。",
+    "correct_option": "てもいい",
+    "incorrect_option_one": "なりもいい",
+    "incorrect_option_two": "たもいい",
+    "incorrect_option_three": "たからいい",
+    "japanese_answer": "ここで写真を撮ってもいいです。",
+    "english_translation": "You may take photos here."
+  },
+  {
+    "grammar_point_id": 36,
+    "japanese_question": "このりんごを食べ_ですか。",
+    "correct_option": "てもいい",
+    "incorrect_option_one": "たもない",
+    "incorrect_option_two": "たからいい",
+    "incorrect_option_three": "てもない",
+    "japanese_answer": "このりんごを食べてもいいですか。",
+    "english_translation": "May I eat this apple?"
+  },
+  {
+    "grammar_point_id": 36,
+    "japanese_question": "明日、元気じゃなく_ですか。",
+    "correct_option": "てもいい",
+    "incorrect_option_one": "たもない",
+    "incorrect_option_two": "たからいい",
+    "incorrect_option_three": "てもない",
+    "japanese_answer": "明日、元気じゃなくてもいいですか。",
+    "english_translation": "Is it okay if I'm not well tomorrow?"
+  },
+  {
+    "grammar_point_id": 37,
+    "japanese_question": "図書館で話し_。",
+    "correct_option": "てはいけません",
+    "incorrect_option_one": "たありません",
+    "incorrect_option_two": "てです",
+    "incorrect_option_three": "からです",
+    "japanese_answer": "図書館で話してはいけません。",
+    "english_translation": "You must not talk in the library."
+  },
+  {
+    "grammar_point_id": 37,
+    "japanese_question": "車を運転し_。",
+    "correct_option": "てはいけない",
+    "incorrect_option_one": "しまてない",
+    "incorrect_option_two": "なれない",
+    "incorrect_option_three": "からです",
+    "japanese_answer": "車を運転してはいけない。",
+    "english_translation": "You must not drive a car."
+  },
+  {
+    "grammar_point_id": 37,
+    "japanese_question": "勉強しなく_。",
+    "correct_option": "てははいけない",
+    "incorrect_option_one": "なれない",
+    "incorrect_option_two": "ないです",
+    "incorrect_option_three": "てました",
+    "japanese_answer": "勉強しなくてははいけない。",
+    "english_translation": "You must study. (Literally: It is bad not to study.)"
+  },
+  {
+    "grammar_point_id": 38,
+    "japanese_question": "休みの日に映画を見_。",
+    "correct_option": "ましょう",
+    "incorrect_option_one": "なれない",
+    "incorrect_option_two": "なれます",
+    "incorrect_option_three": "ているです",
+    "japanese_answer": "休みの日に映画を見ましょう。",
+    "english_translation": "Let's watch a movie on the day off."
+  },
+  {
+    "grammar_point_id": 38,
+    "japanese_question": "私が手伝い_か。",
+    "correct_option": "ましょう",
+    "incorrect_option_one": "いります",
+    "incorrect_option_two": "なります",
+    "incorrect_option_three": "たでしょう",
+    "japanese_answer": "私が手伝いましょうか。",
+    "english_translation": "Shall I help you?"
+  },
+  {
+    "grammar_point_id": 38,
+    "japanese_question": "さあ、始め_。",
+    "correct_option": "ましょう",
+    "incorrect_option_one": "ているです",
+    "incorrect_option_two": "てから",
+    "incorrect_option_three": "でしょう",
+    "japanese_answer": "さあ、始めましょう。",
+    "english_translation": "Now, let's start."
+  },
+  {
+    "grammar_point_id": 39,
+    "japanese_question": "一緒に映画を見_。",
+    "correct_option": "ませんか",
+    "incorrect_option_one": "ませんです",
+    "incorrect_option_two": "ませんある",
+    "incorrect_option_three": "にませんか",
+    "japanese_answer": "一緒に映画を見ませんか。",
+    "english_translation": "Won't you watch a movie with me? / Shall we watch a movie together?"
+  },
+  {
+    "grammar_point_id": 39,
+    "japanese_question": "お茶を飲み_。",
+    "correct_option": "ませんか",
+    "incorrect_option_one": "います",
+    "incorrect_option_two": "あります",
+    "incorrect_option_three": "にませんか",
+    "japanese_answer": "お茶を飲みませんか。",
+    "english_translation": "Would you like to drink some tea?"
+  },
+  {
+    "grammar_point_id": 39,
+    "japanese_question": "花火を見_！",
+    "correct_option": "に行こう",
+    "incorrect_option_one": "にませんか",
+    "incorrect_option_two": "にあります",
+    "incorrect_option_three": "にませんか",
+    "japanese_answer": "花火を見に行こう！",
+    "english_translation": "Let's go see the fireworks!"
+  },
+  {
+    "grammar_point_id": 40,
+    "japanese_question": "デパートへかばんを買い_。",
+    "correct_option": "に行きました",
+    "incorrect_option_one": "にませんか",
+    "incorrect_option_two": "にあります",
+    "incorrect_option_three": "になります",
+    "japanese_answer": "デパートへかばんを買いに行きました。",
+    "english_translation": "I went to the department store to buy a bag."
+  },
+  {
+    "grammar_point_id": 40,
+    "japanese_question": "公園に遊び_。",
+    "correct_option": "に行きます",
+    "incorrect_option_one": "にあります",
+    "incorrect_option_two": "になります",
+    "incorrect_option_three": "にもどります",
+    "japanese_answer": "公園に遊びに行きます。",
+    "english_translation": "I'm going to the park to play."
+  },
+  {
+    "grammar_point_id": 40,
+    "japanese_question": "日本へ日本語を勉強し_。",
+    "correct_option": "に来た",
+    "incorrect_option_one": "にあります",
+    "incorrect_option_two": "になりました",
+    "incorrect_option_three": "になります",
+    "japanese_answer": "日本へ日本語を勉強しに来た。",
+    "english_translation": "I came to Japan to study Japanese."
+  },
+  {
+    "grammar_point_id": 41,
+    "japanese_question": "ここへは_来ましたか。",
+    "correct_option": "どうやって",
+    "incorrect_option_one": "どうやら",
+    "incorrect_option_two": "どうけど",
+    "incorrect_option_three": "どうまで",
+    "japanese_answer": "ここへはどうやって来ましたか。",
+    "english_translation": "How did you get here?"
+  },
+  {
+    "grammar_point_id": 41,
+    "japanese_question": "この料理は_作るんですか。",
+    "correct_option": "どうやって",
+    "incorrect_option_one": "どうやり",
+    "incorrect_option_two": "どうけど",
+    "incorrect_option_three": "どうやら",
+    "japanese_answer": "この料理はどうやって作るんですか。",
+    "english_translation": "How do you make this dish?"
+  },
+  {
+    "grammar_point_id": 41,
+    "japanese_question": "_連絡しましょうか。",
+    "correct_option": "どうやって",
+    "incorrect_option_one": "どうやら",
+    "incorrect_option_two": "どうぞ",
+    "incorrect_option_three": "どうまで",
+    "japanese_answer": "どうやって連絡しましょうか。",
+    "english_translation": "How should we contact each other?"
+  },
+  {
+    "grammar_point_id": 42,
+    "japanese_question": "宿題をし_、テレビを見ます。",
+    "correct_option": "てから",
+    "incorrect_option_one": "てまで",
+    "incorrect_option_two": "てからに",
+    "incorrect_option_three": "てばかり",
+    "japanese_answer": "宿題をしてから、テレビを見ます。",
+    "english_translation": "After doing my homework, I will watch TV."
+  },
+  {
+    "grammar_point_id": 42,
+    "japanese_question": "ご飯を食べて_、友達が来ました。",
+    "correct_option": "から",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "ので",
+    "incorrect_option_three": "けど",
+    "japanese_answer": "ご飯を食べてから、友達が来ました。",
+    "english_translation": "After I ate, my friend came."
+  },
+  {
+    "grammar_point_id": 42,
+    "japanese_question": "卒業し_、ずっと日本に住んでいます。",
+    "correct_option": "てから",
+    "incorrect_option_one": "てので",
+    "incorrect_option_two": "てまで",
+    "incorrect_option_three": "てばかり",
+    "japanese_answer": "卒業してから、ずっと日本に住んでいます。",
+    "english_translation": "Since graduating, I have been living in Japan continuously."
+  },
+  {
+    "grammar_point_id": 43,
+    "japanese_question": "寝る_、歯を磨きます。",
+    "correct_option": "まえに",
+    "incorrect_option_one": "あとに",
+    "incorrect_option_two": "とき",
+    "incorrect_option_three": "から",
+    "japanese_answer": "寝るまえに、歯を磨きます。",
+    "english_translation": "Before going to bed, I brush my teeth."
+  },
+  {
+    "grammar_point_id": 43,
+    "japanese_question": "食事の_、手を洗います。",
+    "correct_option": "まえに",
+    "incorrect_option_one": "なかに",
+    "incorrect_option_two": "までに",
+    "incorrect_option_three": "あとに",
+    "japanese_answer": "食事のまえに、手を洗います。",
+    "english_translation": "Before the meal, I wash my hands."
+  },
+  {
+    "grammar_point_id": 43,
+    "japanese_question": "駅の_公園があります。",
+    "correct_option": "まえに",
+    "incorrect_option_one": "うちに",
+    "incorrect_option_two": "なかに",
+    "incorrect_option_three": "あとに",
+    "japanese_answer": "駅のまえに公園があります。",
+    "english_translation": "There is a park in front of the station."
+  },
+  {
+    "grammar_point_id": 44,
+    "japanese_question": "朝、顔を洗います。_、朝ごはんを食べます。",
+    "correct_option": "それから",
+    "incorrect_option_one": "だから",
+    "incorrect_option_two": "けれど",
+    "incorrect_option_three": "しかし",
+    "japanese_answer": "朝、顔を洗います。それから、朝ごはんを食べます。",
+    "english_translation": "In the morning, I wash my face. After that, I eat breakfast."
+  },
+  {
+    "grammar_point_id": 44,
+    "japanese_question": "りんごとバナナを買いました。_、牛乳も買いました。",
+    "correct_option": "それから",
+    "incorrect_option_one": "でも",
+    "incorrect_option_two": "だから",
+    "incorrect_option_three": "それで",
+    "japanese_answer": "りんごとバナナを買いました。それから、牛乳も買いました。",
+    "english_translation": "I bought apples and bananas. And (following that), I bought milk too."
+  },
+  {
+    "grammar_point_id": 44,
+    "japanese_question": "日本に来ました。_、ずっとここに住んでいます。",
+    "correct_option": "それから",
+    "incorrect_option_one": "それまで",
+    "incorrect_option_two": "けれど",
+    "incorrect_option_three": "だから",
+    "japanese_answer": "日本に来ました。それから、ずっとここに住んでいます。",
+    "english_translation": "I came to Japan. Since then, I have been living here continuously."
+  },
+  {
+    "grammar_point_id": 45,
+    "japanese_question": "彼は医者です。_、とても親切です。",
+    "correct_option": "そして",
+    "incorrect_option_one": "しかし",
+    "incorrect_option_two": "けれど",
+    "incorrect_option_three": "だから",
+    "japanese_answer": "彼は医者です。そして、とても親切です。",
+    "english_translation": "He is a doctor. And, he is very kind."
+  },
+  {
+    "grammar_point_id": 45,
+    "japanese_question": "窓を開けました。_、外に出ました。",
+    "correct_option": "そして",
+    "incorrect_option_one": "しかし",
+    "incorrect_option_two": "だから",
+    "incorrect_option_three": "でも",
+    "japanese_answer": "窓を開けました。そして、外に出ました。",
+    "english_translation": "I opened the window. And then, I went outside."
+  },
+  {
+    "grammar_point_id": 45,
+    "japanese_question": "この町は静かで、_景色も綺麗です。",
+    "correct_option": "そして",
+    "incorrect_option_one": "でも",
+    "incorrect_option_two": "だけど",
+    "incorrect_option_three": "それで",
+    "japanese_answer": "この町は静かで、そして景色も綺麗です。",
+    "english_translation": "This town is quiet, and the scenery is also beautiful."
+  },
+  {
+    "grammar_point_id": 46,
+    "japanese_question": "私は富士山に_ことがある。",
+    "correct_option": "登った",
+    "incorrect_option_one": "登る",
+    "incorrect_option_two": "登っている",
+    "incorrect_option_three": "登ります",
+    "japanese_answer": "私は富士山に登ったことがある。",
+    "english_translation": "I have climbed Mt. Fuji."
+  },
+  {
+    "grammar_point_id": 46,
+    "japanese_question": "一度もお寿司を_ことがありません。",
+    "correct_option": "食べた",
+    "incorrect_option_one": "食べる",
+    "incorrect_option_two": "食べて",
+    "incorrect_option_three": "食べます",
+    "japanese_answer": "一度もお寿司を食べたことがありません。",
+    "english_translation": "I have never eaten sushi even once."
+  },
+  {
+    "grammar_point_id": 46,
+    "japanese_question": "外国で仕事を_ことがありますか。",
+    "correct_option": "した",
+    "incorrect_option_one": "する",
+    "incorrect_option_two": "している",
+    "incorrect_option_three": "します",
+    "japanese_answer": "外国で仕事をしたことがありますか。",
+    "english_translation": "Have you ever worked in a foreign country?"
+  },
+  {
+    "grammar_point_id": 47,
+    "japanese_question": "今、日本語を勉強して_。",
+    "correct_option": "います",
+    "incorrect_option_one": "あります",
+    "incorrect_option_two": "みる",
+    "incorrect_option_three": "おく",
+    "japanese_answer": "今、日本語を勉強しています。",
+    "english_translation": "I am studying Japanese right now."
+  },
+  {
+    "grammar_point_id": 47,
+    "japanese_question": "彼は結婚して_。",
+    "correct_option": "いる",
+    "incorrect_option_one": "ある",
+    "incorrect_option_two": "みる",
+    "incorrect_option_three": "おく",
+    "japanese_answer": "彼は結婚している。",
+    "english_translation": "He is married."
+  },
+  {
+    "grammar_point_id": 47,
+    "japanese_question": "彼女は走って_。",
+    "correct_option": "いません",
+    "incorrect_option_one": "ありません",
+    "incorrect_option_two": "みません",
+    "incorrect_option_three": "おきません",
+    "japanese_answer": "彼女は走っていません。",
+    "english_translation": "She is not running."
+  },
+  {
+    "grammar_point_id": 48,
+    "japanese_question": "家_駅まで歩きました。",
+    "correct_option": "から",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "家から駅まで歩きました。",
+    "english_translation": "I walked from my house to the station."
+  },
+  {
+    "grammar_point_id": 48,
+    "japanese_question": "９時_会議があります。",
+    "correct_option": "から",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "ので",
+    "incorrect_option_three": "より",
+    "japanese_answer": "９時から会議があります。",
+    "english_translation": "There is a meeting from 9 o'clock."
+  },
+  {
+    "grammar_point_id": 48,
+    "japanese_question": "忙しい_、今日は行けません。",
+    "correct_option": "から",
+    "incorrect_option_one": "まで",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "にも",
+    "japanese_answer": "忙しいから、今日は行けません。",
+    "english_translation": "Because I'm busy, I can't go today."
+  },
+  {
+    "grammar_point_id": 49,
+    "japanese_question": "彼女は東京_歩きました。",
+    "correct_option": "まで",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "彼女は東京まで歩きました。",
+    "english_translation": "She walked as far as Tokyo."
+  },
+  {
+    "grammar_point_id": 49,
+    "japanese_question": "午後５時_働きます。",
+    "correct_option": "まで",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "午後５時まで働きます。",
+    "english_translation": "I work until 5 p.m."
+  },
+  {
+    "grammar_point_id": 49,
+    "japanese_question": "１ページから１０ページ_読んでください。",
+    "correct_option": "まで",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "１ページから１０ページまで読んでください。",
+    "english_translation": "Please read from page 1 to page 10."
+  },
+  {
+    "grammar_point_id": 50,
+    "japanese_question": "寒い_、窓を閉めてもいいですか。",
+    "correct_option": "ので",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "寒いので、窓を閉めてもいいですか。",
+    "english_translation": "Since it's cold, may I close the window?"
+  },
+  {
+    "grammar_point_id": 50,
+    "japanese_question": "病気な_、会社を休みます。",
+    "correct_option": "ので",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "病気なので、会社を休みます。",
+    "english_translation": "Because I am sick, I will take the day off from work."
+  },
+  {
+    "grammar_point_id": 50,
+    "japanese_question": "雨が降っている_、傘を持っていったほうがいいですよ。",
+    "correct_option": "ので",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "より",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "雨が降っているので、傘を持っていったほうがいいですよ。",
+    "english_translation": "Since it's raining, you should take an umbrella."
+  },
+  {
+    "grammar_point_id": 51,
+    "japanese_question": "コーヒー_ お茶のほうが 好きです。",
+    "correct_option": "より",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "コーヒーより お茶のほうが 好きです。",
+    "english_translation": "I like tea more than coffee."
+  },
+  {
+    "grammar_point_id": 51,
+    "japanese_question": "東京_ 大阪のほうが 安いです。",
+    "correct_option": "より",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "東京より 大阪のほうが 安いです。",
+    "english_translation": "Osaka is cheaper than Tokyo."
+  },
+  {
+    "grammar_point_id": 51,
+    "japanese_question": "歩く_ 走るほうが、速いです。",
+    "correct_option": "より",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "まで",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "歩くより 走るほうが、速いです。",
+    "english_translation": "Running is faster than walking."
+  },
+  {
+    "grammar_point_id": 52,
+    "japanese_question": "明日早く起きた_いいですよ。",
+    "correct_option": "ほうが",
+    "incorrect_option_one": "ほうがに",
+    "incorrect_option_two": "までも",
+    "incorrect_option_three": "のでも",
+    "japanese_answer": "明日早く起きたほうがいいですよ。",
+    "english_translation": "You should wake up early tomorrow."
+  },
+  {
+    "grammar_point_id": 52,
+    "japanese_question": "そんなにたくさん食べない_いいです。",
+    "correct_option": "ほうが",
+    "incorrect_option_one": "よりは",
+    "incorrect_option_two": "までも",
+    "incorrect_option_three": "からに",
+    "japanese_answer": "そんなにたくさん食べないほうがいいです。",
+    "english_translation": "You shouldn't eat so much."
+  },
+  {
+    "grammar_point_id": 52,
+    "japanese_question": "元気な_いいです。",
+    "correct_option": "ほうが",
+    "incorrect_option_one": "までも",
+    "incorrect_option_two": "よりに",
+    "incorrect_option_three": "だから",
+    "japanese_answer": "元気なほうがいいです。",
+    "english_translation": "It's better to be well."
+  },
+  {
+    "grammar_point_id": 53,
+    "japanese_question": "私は友達に本を_。",
+    "correct_option": "あげました",
+    "incorrect_option_one": "くれました",
+    "incorrect_option_two": "もらいました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "私は友達に本をあげました。",
+    "english_translation": "I gave a book to my friend."
+  },
+  {
+    "grammar_point_id": 53,
+    "japanese_question": "妹は先生に花を_。",
+    "correct_option": "あげます",
+    "incorrect_option_one": "くれます",
+    "incorrect_option_two": "もらいます",
+    "incorrect_option_three": "なります",
+    "japanese_answer": "妹は先生に花をあげます。",
+    "english_translation": "My younger sister will give flowers to the teacher."
+  },
+  {
+    "grammar_point_id": 53,
+    "japanese_question": "荷物を持って_。",
+    "correct_option": "あげる",
+    "incorrect_option_one": "くれる",
+    "incorrect_option_two": "もらう",
+    "incorrect_option_three": "なる",
+    "japanese_answer": "荷物を持ってあげる。",
+    "english_translation": "I'll carry the luggage for you."
+  },
+  {
+    "grammar_point_id": 54,
+    "japanese_question": "友達が私に本を_。",
+    "correct_option": "くれました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "もらいました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "友達が私に本をくれました。",
+    "english_translation": "My friend gave a book to me."
+  },
+  {
+    "grammar_point_id": 54,
+    "japanese_question": "先生が妹にお菓子を_。",
+    "correct_option": "くれました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "もらいました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "先生が妹にお菓子をくれました。",
+    "english_translation": "The teacher gave snacks to my younger sister."
+  },
+  {
+    "grammar_point_id": 54,
+    "japanese_question": "父が手伝って_。",
+    "correct_option": "くれました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "もらいました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "父が手伝ってくれました。",
+    "english_translation": "My father helped me (did the favor of helping)."
+  },
+  {
+    "grammar_point_id": 55,
+    "japanese_question": "私は友達に本を_。",
+    "correct_option": "もらいました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "くれました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "私は友達に本をもらいました。",
+    "english_translation": "I received a book from my friend."
+  },
+  {
+    "grammar_point_id": 55,
+    "japanese_question": "私は母に洗濯をして_。",
+    "correct_option": "もらいました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "くれました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "私は母に洗濯をしてもらいました。",
+    "english_translation": "I had my mother do the laundry for me. (Lit: I received the favor of my mother doing the laundry)."
+  },
+  {
+    "grammar_point_id": 55,
+    "japanese_question": "先生からプレゼントを_。",
+    "correct_option": "もらいました",
+    "incorrect_option_one": "あげました",
+    "incorrect_option_two": "くれました",
+    "incorrect_option_three": "なりました",
+    "japanese_answer": "先生からプレゼントをもらいました。",
+    "english_translation": "I received a gift from the teacher."
+  },
+  {
+    "grammar_point_id": 56,
+    "japanese_question": "彼女は頭がいい_、あまり勉強しない。",
+    "correct_option": "けど",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "ので",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "彼女は頭がいいけど、あまり勉強しない。",
+    "english_translation": "She's smart, but she doesn't study much."
+  },
+  {
+    "grammar_point_id": 56,
+    "japanese_question": "このカメラは高い_、性能がいいです。",
+    "correct_option": "けれども",
+    "incorrect_option_one": "からに",
+    "incorrect_option_two": "のでも",
+    "incorrect_option_three": "まで",
+    "japanese_answer": "このカメラは高いけれども、性能がいいです。",
+    "english_translation": "Although this camera is expensive, the performance is good."
+  },
+  {
+    "grammar_point_id": 56,
+    "japanese_question": "今日はちょっと寒い_、それでもプールで泳ぐつもりです。",
+    "correct_option": "けど",
+    "incorrect_option_one": "から",
+    "incorrect_option_two": "ので",
+    "incorrect_option_three": "より",
+    "japanese_answer": "今日はちょっと寒いけど、それでもプールで泳ぐつもりです。",
+    "english_translation": "It's a little cold today, but I still plan to swim in the pool."
+  },
+  {
+    "grammar_point_id": 57,
+    "japanese_question": "明日は雨が降る_。",
+    "correct_option": "だろう",
+    "incorrect_option_one": "なさい",
+    "incorrect_option_two": "すぎる",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "明日は雨が降るだろう。",
+    "english_translation": "It will probably rain tomorrow."
+  },
+  {
+    "grammar_point_id": 57,
+    "japanese_question": "彼は大学生_。",
+    "correct_option": "だろう",
+    "incorrect_option_one": "でしょう",
+    "incorrect_option_two": "なさい",
+    "incorrect_option_three": "ので",
+    "japanese_answer": "彼は大学生だろう。",
+    "english_translation": "He is probably a college student."
+  },
+  {
+    "grammar_point_id": 57,
+    "japanese_question": "このテスト、難しかった_？",
+    "correct_option": "だろう",
+    "incorrect_option_one": "なさい",
+    "incorrect_option_two": "すぎる",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "このテスト、難しかっただろう？",
+    "english_translation": "This test was difficult, wasn't it?"
+  },
+  {
+    "grammar_point_id": 58,
+    "japanese_question": "田中さんはもう帰った_。",
+    "correct_option": "でしょう",
+    "incorrect_option_one": "だろう",
+    "incorrect_option_two": "なさい",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "田中さんはもう帰ったでしょう。",
+    "english_translation": "Mr. Tanaka has probably already gone home."
+  },
+  {
+    "grammar_point_id": 58,
+    "japanese_question": "今日は暑い_?",
+    "correct_option": "でしょう",
+    "incorrect_option_one": "だろう",
+    "incorrect_option_two": "なさい",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "今日は暑いでしょう?",
+    "english_translation": "It's hot today, isn't it?"
+  },
+  {
+    "grammar_point_id": 58,
+    "japanese_question": "何時に着く_か。",
+    "correct_option": "でしょう",
+    "incorrect_option_one": "だろう",
+    "incorrect_option_two": "なさい",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "何時に着くでしょうか。",
+    "english_translation": "What time do you think we'll arrive?"
+  },
+  {
+    "grammar_point_id": 59,
+    "japanese_question": "私はコーヒーに_。",
+    "correct_option": "します",
+    "incorrect_option_one": "なります",
+    "incorrect_option_two": "あります",
+    "incorrect_option_three": "きます",
+    "japanese_answer": "私はコーヒーにします。",
+    "english_translation": "I'll have/choose coffee (I decide on coffee)."
+  },
+  {
+    "grammar_point_id": 59,
+    "japanese_question": "誕生日パーティーは来週の土曜日に_。",
+    "correct_option": "しました",
+    "incorrect_option_one": "なりました",
+    "incorrect_option_two": "ありました",
+    "incorrect_option_three": "きました",
+    "japanese_answer": "誕生日パーティーは来週の土曜日にしました。",
+    "english_translation": "We decided on next Saturday for the birthday party."
+  },
+  {
+    "grammar_point_id": 59,
+    "japanese_question": "一人で行くことに_。",
+    "correct_option": "しました",
+    "incorrect_option_one": "なりました",
+    "incorrect_option_two": "ありました",
+    "incorrect_option_three": "きました",
+    "japanese_answer": "一人で行くことにしました。",
+    "english_translation": "I decided to go alone."
+  },
+  {
+    "grammar_point_id": 60,
+    "japanese_question": "昨夜、食べ_ました。",
+    "correct_option": "すぎ",
+    "incorrect_option_one": "やすく",
+    "incorrect_option_two": "にくい",
+    "incorrect_option_three": "ながら",
+    "japanese_answer": "昨夜、食べすぎました。",
+    "english_translation": "I ate too much last night."
+  },
+  {
+    "grammar_point_id": 60,
+    "japanese_question": "このカバンは高_。",
+    "correct_option": "すぎる",
+    "incorrect_option_one": "やすい",
+    "incorrect_option_two": "にくい",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "このカバンは高すぎる。",
+    "english_translation": "This bag is too expensive."
+  },
+  {
+    "grammar_point_id": 60,
+    "japanese_question": "彼の部屋は静か_。",
+    "correct_option": "すぎる",
+    "incorrect_option_one": "やすい",
+    "incorrect_option_two": "にくい",
+    "incorrect_option_three": "ばかり",
+    "japanese_answer": "彼の部屋は静かすぎる。",
+    "english_translation": "His room is too quiet."
+  },
+  {
+    "grammar_point_id": 61,
+    "japanese_question": "コーヒー_ 紅茶_ 飲みます。",
+    "correct_option": "も",
+    "incorrect_option_one": "と",
+    "incorrect_option_two": "は",
+    "incorrect_option_three": "を",
+    "japanese_answer": "コーヒーも 紅茶も 飲みます。",
+    "english_translation": "I drink both coffee and black tea."
+  },
+  {
+    "grammar_point_id": 61,
+    "japanese_question": "私は肉_ 魚_ 食べません。",
+    "correct_option": "も",
+    "incorrect_option_one": "は",
+    "incorrect_option_two": "を",
+    "incorrect_option_three": "と",
+    "japanese_answer": "私は肉も 魚も 食べません。",
+    "english_translation": "I eat neither meat nor fish."
+  },
+  {
+    "grammar_point_id": 61,
+    "japanese_question": "その犬は大きく_、そして 可愛いです。",
+    "correct_option": "て",
+    "incorrect_option_one": "に",
+    "incorrect_option_two": "で",
+    "incorrect_option_three": "から",
+    "japanese_answer": "その犬は大きくて、そして 可愛いです。",
+    "english_translation": "That dog is both big and cute."
   }
 ]

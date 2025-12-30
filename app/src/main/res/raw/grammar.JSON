@@ -1,37 +1,429 @@
 [
-  {
-    "grammar": "〜は (wa)",
-    "jlpt": "N5",
-    "meaning": "Topic Marker",
-    "explanation": "This particle marks the topic or theme of the sentence. It tells the listener what the sentence is primarily about, setting the context for the rest of the information. Although written using the hiragana は (ha), it is always pronounced wa when used as a topic marker. It can also be used to show contrast between two or more items.",
-    "mastery": 0
-  },
-  {
-    "grammar": "〜の (no)",
-    "jlpt": "N5",
-    "meaning": "of / belonging to (Possessive) / the one that (Substitution) / Explaining (Nominalizer)",
-    "explanation": "Possession/Modification: The most common use is connecting two nouns where the first noun (A) modifies the second noun (B), often indicating possession (A's B). Substitution: It can replace a noun when that noun is clear from context, meaning 'the one.' Nominalizer: It turns verbs or phrases into nouns (as seen in no ga suki/heta).",
-    "mastery": 0
-  },
-  {
-    "grammar": "〜も (mo)",
-    "jlpt": "N5",
-    "meaning": "Also / too / both A and B / neither A nor B",
-    "explanation": "The particle も (mo) is primarily used to mean 'too' or 'also' and can replace the subject particle が (ga) or the topic particle は (wa). Affirmative: Used to include the noun/phrase in a category ('A, too'). Negative (Strong): When paired with question words (like dare mo, nani mo, doko mo) and a negative verb, it means 'no one/nothing/nowhere.' Repetitive: Used multiple times to mean 'both A and B.'",
-    "mastery": 0
-  },
-  {
-    "grammar": "〜を (o / wo)",
-    "jlpt": "N5",
-    "meaning": "Direct Object Marker",
-    "explanation": "The particle を (wo) marks the direct object of a transitive verb (a verb that acts upon something). It indicates the thing that receives the action. Although written with the hiragana を (wo), it is always pronounced simply as o when used as a particle. It can also be used with verbs of movement to mark the area/path being traversed.",
-    "mastery": 0
-  },
-  {
-    "grammar": "〜が (ga)",
-    "jlpt": "N5",
-    "meaning": "Subject Marker",
-    "explanation": "The particle が (ga) marks the grammatical subject of the sentence. While は (wa) marks the topic (the thing being talked about), が (ga) identifies the doer of the action or the thing that possesses the state, particularly when: The subject is new information or being specified. Used with verbs expressing existence (iru/aru) or potential (dekiru/wakaru). Used with adjectives expressing feelings, desires, or capabilities (suki, kirai, hoshii).",
-    "mastery": 0
-  }
+    {
+      "grammar": "〜は (wa)",
+      "jlpt": "N5",
+      "meaning": "Topic Marker",
+      "explanation": "This particle marks the topic or theme of the sentence. It tells the listener what the sentence is primarily about, setting the context for the rest of the information. Although written using the hiragana は (ha), it is always pronounced wa when used as a topic marker. It can also be used to show contrast between two or more items.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜の (no)",
+      "jlpt": "N5",
+      "meaning": "of / belonging to (Possessive) / the one that (Substitution) / Explaining (Nominalizer)",
+      "explanation": "Possession/Modification: The most common use is connecting two nouns where the first noun (A) modifies the second noun (B), often indicating possession (A's B). Substitution: It can replace a noun when that noun is clear from context, meaning 'the one.' Nominalizer: It turns verbs or phrases into nouns (as seen in no ga suki/heta).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜も (mo)",
+      "jlpt": "N5",
+      "meaning": "Also / too / both A and B / neither A nor B",
+      "explanation": "The particle も (mo) is primarily used to mean 'too' or 'also' and can replace the subject particle が (ga) or the topic particle は (wa). Affirmative: Used to include the noun/phrase in a category ('A, too'). Negative (Strong): When paired with question words (like dare mo, nani mo, doko mo) and a negative verb, it means 'no one/nothing/nowhere.' Repetitive: Used multiple times to mean 'both A and B.'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜を (o / wo)",
+      "jlpt": "N5",
+      "meaning": "Direct Object Marker",
+      "explanation": "The particle を (wo) marks the direct object of a transitive verb (a verb that acts upon something). It indicates the thing that receives the action. Although written with the hiragana を (wo), it is always pronounced simply as o when used as a particle. It can also be used with verbs of movement to mark the area/path being traversed.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜が (ga)",
+      "jlpt": "N5",
+      "meaning": "Subject Marker",
+      "explanation": "The particle が (ga) marks the grammatical subject of the sentence. While は (wa) marks the topic (the thing being talked about), が (ga) identifies the doer of the action or the thing that possesses the state, particularly when: The subject is new information or being specified. Used with verbs expressing existence (iru/aru) or potential (dekiru/wakaru). Used with adjectives expressing feelings, desires, or capabilities (suki, kirai, hoshii).",
+      "mastery": 0
+    },
+    {
+      "grammar": "が (ga)",
+      "jlpt": "N5",
+      "meaning": "But / however / still / and (Contrastive/Preparatory Conjunction)",
+      "explanation": "When placed between two clauses, が (ga) functions as a conjunction. Contrast: It shows a soft contrast or contradiction between the two clauses ('A, but B'). It's generally considered softer and more polite than kedo/keredomo. Preparation: It can be used simply to introduce a topic or soften a request before the main point is stated, similar to saying 'Excuse me, I have something to say...'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜か (ka)",
+      "jlpt": "N5",
+      "meaning": "Question particle / or (when listing options)",
+      "explanation": "Question Marker: Attached to the end of a sentence to turn it into a question. In polite form, it follows です (desu) or ます (masu). In plain form, it follows the plain verb/adjective/noun form (and no か is strictly necessary, as intonation usually marks the question, but it can be used for clarity). Listing Options: Used to list alternatives, similar to 'A or B.' Indefinite Pronouns: Used with question words (like doko or nani) to mean 'somewhere' or 'something' (e.g., doko ka = somewhere).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜か (ka)",
+      "jlpt": "N5",
+      "meaning": "Or / either A or B (Listing Alternatives) / some (Indefinite Pronoun)",
+      "explanation": "This particle is used in two ways related to choice or uncertainty: Alternatives: Placed between two or more nouns to mean 'A or B.' Indefinite Pronouns: Attached to a question word (dare, doko, nani) to create an indefinite pronoun like 'someone,' 'somewhere,' or 'something.'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜に (ni)",
+      "jlpt": "N5",
+      "meaning": "At / on / in (Time, Location of Existence, Target)",
+      "explanation": "に (ni) marks a precise point or target. Its main uses in N5 are: Specific Time: Marks a specific time (e.g., 3 o'clock, Monday). (Not used with relative times like kyō or mainichi). Location of Existence: Marks the place where a person or object statically exists (used with いる iru and ある aru). Target/Destination: Marks the final destination or recipient of an action (e.g., going to school, giving to a friend).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜へ (e)",
+      "jlpt": "N5",
+      "meaning": "To / towards (Direction Marker)",
+      "explanation": "The particle へ (e) marks the direction or general route being taken. Although written with the hiragana へ (he), it is always pronounced e when used as a particle. While に (ni) focuses on the final point of arrival, へ (e) emphasizes the direction of the movement. For basic destinations, に and へ are often interchangeable, but へ highlights the journey.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜と (to)",
+      "jlpt": "N5",
+      "meaning": "And / with / quotation marker / when (conditional)",
+      "explanation": "と (to) is a versatile particle with several key functions: Listing (Exhaustive): Used to connect nouns when listing every item in a category (complete list). Companion: Marks the person or animal that the subject is with. Quotation: Follows a phrase or quote and precedes a verb like 言う (iu) (to say) or 思う (omou) (to think).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜や (ya)",
+      "jlpt": "N5",
+      "meaning": "And / such things as / among other things",
+      "explanation": "The particle や (ya) is used to list a few examples of items in a category, implying that the list is not exhaustive and there are other similar items (e.g., 'A, B, and such'). This is different from と (to), which creates a complete list (e.g., 'A and B, that's all'). It is often followed by など (nado) or なんか (nanka) meaning 'etc.' or 'and so on.'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜で (de)",
+      "jlpt": "N5",
+      "meaning": "In / at / on (Location of Action)",
+      "explanation": "This particle is used to mark the location where a dynamic action takes place. It signifies the physical area or site where the activity (studying, eating, playing) occurs. It is crucial to distinguish this from the particle に (ni), which marks the location of static existence (where something simply is) or the destination of movement.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜で (de)",
+      "jlpt": "N5",
+      "meaning": "By / with / using (Means, Method, Instrument)",
+      "explanation": "This particle marks the instrument, method, tool, material, or vehicle used to perform an action. It signifies the way or means by which an action is carried out. This is a very broad and common use of で (de).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜で (de)",
+      "jlpt": "N5",
+      "meaning": "In / within / with (Duration, Limit, or Scope)",
+      "explanation": "This use of the particle で (de) marks the limit of time, money, or another resource used to complete an action. It specifies the maximum extent within which something happens.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜です (desu)",
+      "jlpt": "N5",
+      "meaning": "To be (is, am, are) / polite copula",
+      "explanation": "です (desu) is the primary particle used to make a sentence sound polite or formal in standard Japanese. It connects the subject of the sentence to a noun, pronoun, or adjective, establishing identity or quality. It is always placed at the end of the sentence.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ね (ne)",
+      "jlpt": "N5",
+      "meaning": "Isn't it? / right? / (Soft agreement/confirmation)",
+      "explanation": "This particle is placed at the end of a sentence to seek agreement or confirmation from the listener. It creates a feeling of rapport, as if you are sharing information or emotion that the listener is expected to agree with or acknowledge. It softens the tone of the statement.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜よ (yo)",
+      "jlpt": "N5",
+      "meaning": "I tell you / you know / (Assertion/Emphasis/Warning)",
+      "explanation": "This particle is placed at the end of a sentence to assert new information or to convey the speaker's strong opinion or warning to the listener. It is an assertive particle, and using it too often can sound aggressive, so it should be used judiciously to emphasize a point or correct a misunderstanding.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜な (na)",
+      "jlpt": "N5",
+      "meaning": "Don't (do something) / Do not (Prohibition, Informal)",
+      "explanation": "This suffix is attached to the plain form (dictionary form) of a verb and expresses a strong, direct, and casual negative command or prohibition. It is highly informal, often used by men, or used when speaking to children or people of much lower status. For polite prohibition, use 〜ないでください (naide kudasai) or 〜てはいけません (te wa ikemasen).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜がある (ga aru)",
+      "jlpt": "N5",
+      "meaning": "To be / to exist / to have (for possession)",
+      "explanation": "This construction uses the subject particle が (ga) and the verb ある (aru) to indicate the existence or location of inanimate objects (things, places, abstract concepts) or to indicate possession (I have...).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜がいる (ga iru)",
+      "jlpt": "N5",
+      "meaning": "To be / to exist (living objects)",
+      "explanation": "This construction uses the subject particle が (ga) and the verb いる (iru) to indicate the existence or location of animate objects, which includes people and animals.",
+      "mastery": 0
+    },
+    {
+      "grammar": "まだ (mada)",
+      "jlpt": "N5",
+      "meaning": "Still / yet / not yet",
+      "explanation": "まだ (mada) is an adverb used in two main ways: Affirmative/Positive Sentences: It means an action or state is continuing or still ongoing ('still'). Negative Sentences: It means an action or state has not reached completion yet ('not yet').",
+      "mastery": 0
+    },
+    {
+      "grammar": "もう (mou)",
+      "jlpt": "N5",
+      "meaning": "Already / anymore / no longer",
+      "explanation": "もう (mou) is an adverb used in three main ways: Affirmative/Positive Sentences: It means an action or state has already been completed ('already'). Negative Sentences: It means a state or condition has ended ('no longer' / 'anymore'). Question/Command: It means 'one more' or 'another' (e.g., mō ichido / mō hitotsu).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜だけ (dake)",
+      "jlpt": "N5",
+      "meaning": "Only / just / no more than",
+      "explanation": "This particle is used to express limitation or restriction, meaning 'just that much' or 'nothing more.' It is one of the easiest particles to use as it can generally be attached directly after a noun, verb, or adjective phrase.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜くらい / 〜ぐらい (kurai / gurai)",
+      "jlpt": "N5",
+      "meaning": "About / approximately / around / at least (when used with an extreme minimum)",
+      "explanation": "This particle indicates an approximate quantity, degree, or extent. It is interchangeable with ぐらい (gurai)—the choice often comes down to personal preference or the surrounding phonetics. It can also be used to express a minimum requirement or an example that illustrates a low degree.",
+      "mastery": 0
+    },
+    {
+      "grammar": "いちばん (ichiban)",
+      "jlpt": "N5",
+      "meaning": "The most / the best / number one",
+      "explanation": "いちばん (ichiban) is an adverb used to express the superlative degree (the highest, the most, the best) among three or more items. It is placed before the adjective or verb it modifies. In casual speech, it can sometimes be shortened to 一番 (ippan) or 一番 (ichiban) followed by a slight pause.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜のがすき (no ga suki)",
+      "jlpt": "N5",
+      "meaning": "To like (doing something) / to love",
+      "explanation": "This pattern expresses a general liking or preference for an activity or object. When describing an activity, the verb is followed by the nominalizer の (no), turning the action into a concept, which is then the subject of the liking (がすき). If you are referring to a noun, の (no) is not needed.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜のがじょうず (no ga jōzu)",
+      "jlpt": "N5",
+      "meaning": "To be good at (doing something) / to be skilled at",
+      "explanation": "This pattern is used to express that someone has a high degree of skill in a certain activity. The particle の (no) works as a nominalizer, turning the preceding verb phrase into a noun, which is then the subject of the skill (がじょうず). Important Note: In Japanese, 上手 (jōzu) is generally used to praise someone else's skill. When talking about your own skill, it is more humble and natural to use 得意 (tokui) (good at) or simply describe the situation.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜のがへた (no ga heta)",
+      "jlpt": "N5",
+      "meaning": "To be bad at (doing something) / to be poor at",
+      "explanation": "This structure is the opposite of jōzu. It expresses that someone has a low degree of skill in an activity. It follows the same grammatical structure, using the nominalizer の (no) and the particle が (ga), followed by the adjective 下手 (heta). This word can be used to describe anyone's lack of skill, including one's own.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜たい (tai)",
+      "jlpt": "N5",
+      "meaning": "Want to (do something)",
+      "explanation": "This suffix is attached to the verb stem (the ます-stem) to express the speaker's desire to perform an action. It functions grammatically like an い-adjective, meaning it can be conjugated (e.g., negative form is taku nai).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜つもり (tsumori)",
+      "jlpt": "N5",
+      "meaning": "Plan to / intend to / intend not to (for negation)",
+      "explanation": "The noun つもり (tsumori) is used to express the speaker's intention or plan to do (or not do) something in the future. It is a strong statement of one's will.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜になる (ni naru)",
+      "jlpt": "N5",
+      "meaning": "To become / to get / to turn into (Change of State)",
+      "explanation": "This verb is used to express a change of state or transformation over time. The particle に (ni) is used before the verb なる (naru) (to become) to indicate the result or destination of the change. Note that the conjugation depends on the word type being changed: Noun/な-Adjective take に, while い-Adjectives take the く form.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜てください (te kudasai)",
+      "jlpt": "N5",
+      "meaning": "Please do... / (Affirmative Request or Command)",
+      "explanation": "This is the standard way to make a polite request or command in Japanese. It combines the Te-form of a verb (which links actions) with ください (kudasai) (which means 'please give me' or 'please grant'). The literal interpretation is 'Please give me the favor of doing [X].'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ないでください (naide kudasai)",
+      "jlpt": "N5",
+      "meaning": "Please don't... / (Polite Negative Request or Prohibition)",
+      "explanation": "This structure is used to make a polite request for prohibition—asking someone not to do an action. It is formed by taking the verb's plain negative form (nai-form), dropping the final i, and attaching いでください (de kudasai).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜てもいいですか (te mo ii desu ka)",
+      "jlpt": "N5",
+      "meaning": "May I...? / Is it okay if I...? / Can I...? (Asking for Permission)",
+      "explanation": "This phrase is used to politely ask for permission to perform an action. It combines: The Te-form (〜て) of the verb. も (mo) ('even if'). いい (ii) ('good/okay'). ですか (desu ka) (polite question marker). The literal meaning is 'Even if I do [X], is it okay?'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜てもいい (te mo ii)",
+      "jlpt": "N5",
+      "meaning": "It’s okay to (do something) / Can / May (Permission)",
+      "explanation": "This pattern is used to grant permission or to ask if it is acceptable to do something. The use of the particle も (mo) after the Te-form is similar to saying 'even if you do X, it is good/okay.' The i in ii often becomes yoku in the negative (te mo yoku nai) but the formal negative is usually expressed with a different structure.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜てはいけない (te wa ikenai)",
+      "jlpt": "N5",
+      "meaning": "May not / Must not / Should not (Prohibition)",
+      "explanation": "This pattern is used to express prohibition or to state that an action must not be performed. The は (wa) particle emphasizes the preceding Te-form, creating a strong restriction: 'as for doing X, it is not good.' The most common and polite form is 〜てはいけません (te wa ikemasen).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ましょう (mashō)",
+      "jlpt": "N5",
+      "meaning": "Let's (do something) / Shall I (offer) / (Polite Volitional)",
+      "explanation": "This is the polite volitional form of a verb. Suggestion/Invitation: Used to suggest or invite the listener to do an action together (Let's...). This is a strong suggestion. Offer: Used with the speaker as the subject to offer assistance or action (Shall I...?).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ませんか (masen ka)",
+      "jlpt": "N5",
+      "meaning": "Won't you...? / Shall we...? / Let's... (Suggestion/Invitation)",
+      "explanation": "This is a polite and friendly way to invite the listener to do something together or to suggest an action. It is formed by using the negative question form of the verb's polite conjugation (ます-form). Unlike the similar 〜ましょう (mashō), which is a stronger declaration of intent, 〜ませんか is a genuine question asking for agreement.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜に行く (ni iku)",
+      "jlpt": "N5",
+      "meaning": "To go in order to do (something)",
+      "explanation": "This pattern is used to clearly state the purpose for moving to a particular location. The verb describing the purpose is put in its ます-stem form and followed by the particle に (ni), which indicates the purpose of the action. This can be used with any verb of motion (行く iku, 来る kuru, 帰る kaeru).",
+      "mastery": 0
+    },
+    {
+      "grammar": "どうやって (dō yatte)",
+      "jlpt": "N5",
+      "meaning": "How / in what way / by what means",
+      "explanation": "This is an interrogative adverb used specifically to ask about the method, means, or detailed process used to accomplish an action (e.g., How did you make it? or How did you get there?). The verb やって (yatte) is the Te-form of yaru (to do), making the literal meaning roughly 'doing what way?'.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜てから (te kara)",
+      "jlpt": "N5",
+      "meaning": "After doing (something) / since (a past action occurred)",
+      "explanation": "This construction uses the verb's Te-form followed by から (kara). It is used to indicate a sequence of events, where the first action must be fully completed before the second action begins. The second action follows the completion of the first. It can also mark a point in time (since X happened).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜まえに (mae ni)",
+      "jlpt": "N5",
+      "meaning": "Before (doing something) / in front of (location)",
+      "explanation": "The word まえ (mae) has two main meanings, both of which are used with the particle に (ni): Time Sequence: When used after a verb's plain form (dictionary form), it means 'before [Verb]-ing.' This is used to indicate that the first action must be completed before the main action occurs. Location: When used after a noun, it means 'in front of' or 'before' (spatially).",
+      "mastery": 0
+    },
+    {
+      "grammar": "それから (sore kara)",
+      "jlpt": "N5",
+      "meaning": "And then / after that / since then (Time Sequence)",
+      "explanation": "それから (sore kara) places a stronger emphasis on temporal sequence—that the second action happened after the first action was completed. It is frequently used when listing a series of steps, events, or actions that occur over a period of time. The それ (sore) refers back to the preceding action or event.",
+      "mastery": 0
+    },
+    {
+      "grammar": "そして (soshite)",
+      "jlpt": "N5",
+      "meaning": "And / and then / in addition / thus",
+      "explanation": "そして (soshite) is used to link sentences or clauses by adding a related or sequential action, idea, or piece of information. Adding Information: Most commonly used to add parallel information ('A, and B'). Simple Sequence: Can indicate the next step in a sequence, similar to sore kara, but focuses more on the smooth flow of the narrative rather than the strict passage of time.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜たことがある (ta koto ga aru)",
+      "jlpt": "N5",
+      "meaning": "Have done something before / have the experience of (doing something)",
+      "explanation": "This construction uses the subject particle が (ga) and the verb ある (aru), preceded by the nominalizer こと (koto) and the Plain Past Tense (た-form) of a verb. It is used to express past experience—whether one has ever done something or not.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ている (te iru)",
+      "jlpt": "N5",
+      "meaning": "To be doing (continuous action) / to be in a state of (resultant state)",
+      "explanation": "This is a highly versatile and frequent structure formed by the Te-form of a verb followed by いる (iru). It has two main uses, determined by the verb type: Continuous/Progressive Action: Actions currently happening (e.g., hashitte iru - 'is running'). Resultant State: The current state resulting from a completed action (e.g., kekkon shite iru - 'is married').",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜から (kara)",
+      "jlpt": "N5",
+      "meaning": "From (starting point in space or time) / because / since (reason)",
+      "explanation": "The particle から (kara) has two distinct major uses: Starting Point: Marks the beginning of a range in time or space ('from A'). Often used in tandem with まで (made). Reason/Cause: Marks the reason or cause for the subsequent action or state ('because A'). This use is stronger and more assertive than ので (node).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜まで (made)",
+      "jlpt": "N5",
+      "meaning": "Until / up to / as far as (Ending Point)",
+      "explanation": "The particle まで (made) marks the ending point or limit of a range in time, space, or quantity. It signifies the extent or completion of an action or span. It is often paired with から (kara) to mark the entire range ('from A until B').",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ので (node)",
+      "jlpt": "N5",
+      "meaning": "Because / since / the reason is that (Cause and Effect)",
+      "explanation": "ので (node) is a conjunction particle used to state a reason or cause for an action or situation described in the second clause. It is generally considered softer, more objective, and less assertive than the similar particle から (kara), making it slightly more polite and appropriate for requests or apologies.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜より〜ほうが (yori~ hō ga)",
+      "jlpt": "N5",
+      "meaning": "A is better than B / more than",
+      "explanation": "This structure is used to express a comparison between two items or actions (A and B). より (yori) marks the item being compared against (B, meaning 'than'). のほうが (no hō ga) marks the item that is preferred or superior (A, meaning 'the side of').",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜ほうがいい (hō ga ii)",
+      "jlpt": "N5",
+      "meaning": "Had better / should / it would be better to",
+      "explanation": "This structure is used to give advice or make a recommendation by presenting one option as superior to another (often implied). The particle が (ga) emphasizes the chosen course of action (の方 no hō means 'side' or 'option').",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜あげる (ageru)",
+      "jlpt": "N5",
+      "meaning": "To give (Away from the speaker or in-group)",
+      "explanation": "This verb is used when the giver is the subject and the recipient is not the speaker or someone in the speaker's immediate inner circle (family, close friends). The direction of the action is viewed as moving away from the speaker's position.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜くれる (kureru)",
+      "jlpt": "N5",
+      "meaning": "To give (Towards the speaker or in-group)",
+      "explanation": "This verb is used when the giver is the subject and the recipient is the speaker or someone in the speaker's immediate inner circle (family, close friends). The direction of the action is viewed as moving towards the speaker's position. The speaker is often the recipient, and the recipient is often omitted.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜もらう (morau)",
+      "jlpt": "N5",
+      "meaning": "To receive / to get (from someone)",
+      "explanation": "This verb is used when the recipient is the grammatical subject. It always expresses the transaction from the receiver's perspective. The person who gives the item is marked by either the particle に (ni) or から (kara) ('from'). It can also be combined with the Te-form of a verb (〜てもらう) to mean 'to receive the favor of someone doing something for you' or 'to have someone do something for you.'",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜けど / 〜けれども (kedo / keredomo)",
+      "jlpt": "N5",
+      "meaning": "But / however / although",
+      "explanation": "These conjunctions are used to connect two clauses with contrasting or preparatory information. けれども (keredomo) is the most formal form. けれど (keredo) is a slightly less formal form. けど (kedo) is the most common and casual form. They can also be used just to introduce a topic before making a request or asking a question, softening the tone.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜だろう (darou)",
+      "jlpt": "N5",
+      "meaning": "Probably / I suppose / don't you agree? (Conjecture, Plain Form)",
+      "explanation": "だろう (darou) is the plain form of でしょう (deshou). It is used to express the speaker's guess or conjecture about a current or future state, with a moderate degree of certainty. When used at the end of a question, it acts as a casual tag question, asking for agreement. It is mainly used among close friends or by speakers to themselves.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜でしょう (deshou)",
+      "jlpt": "N5",
+      "meaning": "I think / probably / isn't it? (Conjecture, Polite Form)",
+      "explanation": "でしょう (deshou) is the polite form of だろう (darou). It is used to express the speaker's guess or supposition in a polite context. When used at the end of a question (でしょう か?), it means 'I wonder' or 'Perhaps you know.' When used as a tag question (でしょう?), it politely seeks agreement.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜にする (ni suru)",
+      "jlpt": "N5",
+      "meaning": "To decide on / to choose (something)",
+      "explanation": "This construction uses the particle に (ni) followed by the verb する (suru) to express the speaker's decision or choice. It is used when actively selecting an item from a group of possibilities (e.g., ordering food, choosing a color, selecting a date).",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜すぎる (sugiru)",
+      "jlpt": "N5",
+      "meaning": "Too much / excessively / too (adjective)",
+      "explanation": "The suffix 〜すぎる (sugiru) is attached to the stem of a verb or adjective to express that the quality or action is excessive or beyond a reasonable limit. It functions grammatically like a る-verb, meaning it is conjugated as a regular Group 2 verb.",
+      "mastery": 0
+    },
+    {
+      "grammar": "〜も〜も (mo… mo)",
+      "jlpt": "N5",
+      "meaning": "Both A and B / neither A nor B (Listing with Inclusion/Exclusion)",
+      "explanation": "This pattern uses も (mo) twice or more to indicate that all listed items share the same quality or action. Affirmative: Means 'both A and B' (and perhaps C, D, etc.). Negative: When the sentence ends with a negative verb, it means 'neither A nor B' (strong negation). When used in this way, も replaces the particles が, は, or を.",
+      "mastery": 0
+    }
 ]

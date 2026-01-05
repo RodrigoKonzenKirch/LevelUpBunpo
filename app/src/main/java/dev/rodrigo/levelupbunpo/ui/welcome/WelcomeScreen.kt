@@ -32,30 +32,34 @@ fun WelcomeScreen(
             style = MaterialTheme.typography.headlineMedium
         )
         Spacer(modifier = Modifier.height(32.dp))
-        Button(
-            onClick = onStartQuiz,
-            modifier = Modifier
-                .height(56.dp)
-                .width(256.dp),
-            shape = MaterialTheme.shapes.large
-        ) {
-            Text(
-                text = stringResource(R.string.start_quiz_welcome_screen),
-                style = MaterialTheme.typography.titleLarge
-            )
-        }
+        MenuButton(
+            text = stringResource(R.string.start_quiz_welcome_screen),
+            onClick = onStartQuiz
+        )
         Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = onShowAchievements,
-            modifier = Modifier
-                .height(56.dp)
-                .width(256.dp),
-            shape = MaterialTheme.shapes.large
-        ) {
-            Text(
-                text = "View Achievements",
-                style = MaterialTheme.typography.titleLarge
-            )
-        }
+        MenuButton(
+            text = stringResource(R.string.view_achievements_welcome_screen,),
+            onClick = onShowAchievements
+        )
+    }
+}
+
+@Composable
+fun MenuButton(
+    text: String,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit
+){
+    Button(
+        onClick = onClick,
+        modifier = modifier
+            .height(56.dp)
+            .width(256.dp),
+        shape = MaterialTheme.shapes.large
+    ) {
+        Text(
+            text = text,
+            style = MaterialTheme.typography.titleLarge
+        )
     }
 }

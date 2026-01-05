@@ -17,4 +17,5 @@
     <string name="total_mastery_title">Total Mastery</string>
     <string name="grammar_points_title">Grammar Points</string>
     <string name="mastery_progress_text">%1$d / %2$d</string>
+    <string name="view_achievements_welcome_screen">View Achievements</string>
 </resources>

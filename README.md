@@ -6,6 +6,10 @@ Level Up Bunpo is an Android application designed to help users learn and master
 
 The primary goal of this app is to provide a simple yet effective tool for Japanese language learners to practice grammar points (文法, bunpō). By repeatedly quizzing the user, the app helps solidify their understanding and build a strong foundation, with a built-in mastery system to track their journey from novice to expert for each grammar concept.
 
+## Screenshots
+
+<img src="/../Screenshots/app/src/main/res/assets/Screenshot_quiz.png" width="200"> <img src="/../Screenshots/app/src/main/res/assets/Screenshot_achievements.png" width="200">
+
 ## Key Features
 
 * Interactive Grammar Quiz: A multiple-choice quiz that presents users with a Japanese sentence and asks them to select the correct grammatical particle.

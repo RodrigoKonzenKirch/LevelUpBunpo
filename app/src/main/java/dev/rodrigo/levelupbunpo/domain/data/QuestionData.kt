@@ -1,22 +1,24 @@
 package dev.rodrigo.levelupbunpo.domain.data
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class QuestionData(
-    @SerializedName("grammar_point_id")
+    @SerialName("grammar_point_id")
     val grammarPointId: Int,
-    @SerializedName("japanese_question")
+    @SerialName("japanese_question")
     val japaneseQuestion: String,
-    @SerializedName("correct_option")
+    @SerialName("correct_option")
     val correctOption: String,
-    @SerializedName("incorrect_option_one")
+    @SerialName("incorrect_option_one")
     val incorrectOptionOne: String,
-    @SerializedName("incorrect_option_two")
+    @SerialName("incorrect_option_two")
     val incorrectOptionTwo: String,
-    @SerializedName("incorrect_option_three")
+    @SerialName("incorrect_option_three")
     val incorrectOptionThree: String,
-    @SerializedName("japanese_answer")
+    @SerialName("japanese_answer")
     val japaneseAnswer: String,
-    @SerializedName("english_translation")
+    @SerialName("english_translation")
     val englishTranslation: String
 )

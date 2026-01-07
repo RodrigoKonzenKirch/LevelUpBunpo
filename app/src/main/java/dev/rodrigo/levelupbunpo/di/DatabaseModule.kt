@@ -4,8 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,6 +19,7 @@ import dev.rodrigo.levelupbunpo.domain.data.QuestionData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.serialization.json.Json
 import java.io.InputStreamReader
 import javax.inject.Provider
 import javax.inject.Singleton
@@ -37,7 +36,7 @@ object DatabaseModule {
         @ApplicationContext context: Context,
         grammarDaoProvider: Provider<GrammarPointDao>,
         questionDaoProvider: Provider<QuestionDao>,
-        gson: Gson
+        json: Json
     ): LevelUpBunpoDatabase {
         return Room.databaseBuilder(
                 context,
@@ -51,15 +50,13 @@ object DatabaseModule {
                         // Prepopulate grammar
                         val grammarInputStream = context.resources.openRawResource(R.raw.grammar)
                         val grammarReader = InputStreamReader(grammarInputStream)
-                        val grammarPointListType = object : TypeToken<List<GrammarPoint>>() {}.type
-                        val grammarPoints: List<GrammarPoint> = gson.fromJson(grammarReader, grammarPointListType)
+                        val grammarPoints: List<GrammarPoint> = json.decodeFromString(grammarReader.readText())
                         grammarDaoProvider.get().insertAll(grammarPoints)
 
                         // Prepopulate questions
                         val questionInputStream = context.resources.openRawResource(R.raw.questions)
                         val questionReader = InputStreamReader(questionInputStream)
-                        val questionDataListType = object : TypeToken<List<QuestionData>>() {}.type
-                        val questionData: List<QuestionData> = gson.fromJson(questionReader, questionDataListType)
+                        val questionData: List<QuestionData> = json.decodeFromString(questionReader.readText())
                         val questions = questionData.map {
                             Question(
                                 grammarPointId = it.grammarPointId,

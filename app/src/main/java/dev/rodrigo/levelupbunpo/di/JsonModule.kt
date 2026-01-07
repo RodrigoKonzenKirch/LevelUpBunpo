@@ -1,10 +1,10 @@
 package dev.rodrigo.levelupbunpo.di
 
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
 @Module
@@ -13,7 +13,7 @@ object JsonModule {
 
     @Provides
     @Singleton
-    fun provideGson(): Gson {
-        return Gson()
+    fun provideJson(): Json = Json {
+        ignoreUnknownKeys = true
     }
 }

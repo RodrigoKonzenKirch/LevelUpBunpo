@@ -69,7 +69,6 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     annotationProcessor(libs.androidx.room.compiler)
 
-    implementation(libs.gson)
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.androidx.navigation3.ui)

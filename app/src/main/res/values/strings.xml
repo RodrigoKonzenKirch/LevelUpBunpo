@@ -18,4 +18,10 @@
     <string name="grammar_points_title">Grammar Points</string>
     <string name="mastery_progress_text">%1$d / %2$d</string>
     <string name="view_achievements_welcome_screen">View Achievements</string>
+    <string name="quiz_finished_title">Quiz Finished</string>
+    <string name="quiz_result_score">You got %1$d out of %2$d correct!</string>
+    <string name="start_new_quiz_button">Start New Quiz</string>
+    <string name="back_to_welcome_screen_button">Back to Welcome Screen</string>
+    <string name="question_progress">Question %1$d of %2$d</string>
+    <string name="finish_quiz_button">Finish Quiz</string>
 </resources>

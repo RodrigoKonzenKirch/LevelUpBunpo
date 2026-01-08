@@ -40,36 +40,83 @@ import dev.rodrigo.levelupbunpo.data.local.Question
 import dev.rodrigo.levelupbunpo.ui.QUESTION_MASTERY_MAX_LEVEL
 import dev.rodrigo.levelupbunpo.ui.UiState
 
+private const val QUIZ_SIZE = 10
+
 @Composable
 fun GrammarQuizScreen(
-    viewModel: GrammarQuizViewModel = hiltViewModel()
+    viewModel: GrammarQuizViewModel = hiltViewModel(),
+    onNavigateBack: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-    if (uiState.uiState is UiState.LOADING) {
-        LoadingScreen()
-    }
-
-    if (uiState.uiState is UiState.ERROR) {
-        ErrorScreen(errorMessage = (uiState.uiState as UiState.ERROR).message)
-        return
-    }
-
-    if (uiState.uiState is UiState.SUCCESS) {
-        QuizScreen(
-            question = uiState.question!!,
-            shuffledOptions = uiState.shuffledOptions,
-            grammarTip = uiState.grammarTip,
-            selectedOption = uiState.selectedOption,
-            isAnswered = uiState.isAnswered,
-            isCorrect = uiState.isCorrect,
-            isHintShown = uiState.isHintShown,
-            onOptionSelected = { viewModel.processAnswer(it) },
-            onHintToggled = { viewModel.onHintToggled() },
-            onLoadNextQuestion = { viewModel.loadNextQuestion() }
-        )
+    when (uiState.uiState) {
+        is UiState.LOADING -> LoadingScreen()
+        is UiState.ERROR -> ErrorScreen(errorMessage = (uiState.uiState as UiState.ERROR).message)
+        is UiState.SUCCESS -> {
+            if (uiState.isQuizFinished) {
+                QuizResultScreen(
+                    correctAnswers = uiState.correctAnswersCount,
+                    onStartNewQuiz = { viewModel.startNewQuiz() },
+                    onNavigateBack = onNavigateBack
+                )
+            } else {
+                uiState.question?.let { question ->
+                    QuizScreen(
+                        question = question,
+                        shuffledOptions = uiState.shuffledOptions,
+                        grammarTip = uiState.grammarTip,
+                        selectedOption = uiState.selectedOption,
+                        isAnswered = uiState.isAnswered,
+                        isCorrect = uiState.isCorrect,
+                        isHintShown = uiState.isHintShown,
+                        onOptionSelected = { viewModel.processAnswer(it) },
+                        onHintToggled = { viewModel.onHintToggled() },
+                        onLoadNextQuestion = { viewModel.loadNextQuestion() },
+                        currentQuestionIndex = uiState.currentQuestionIndex
+                    )
+                } ?: LoadingScreen() // Show loading if question is somehow null during success
+            }
+        }
     }
 }
+
+@Composable
+fun QuizResultScreen(
+    correctAnswers: Int,
+    onStartNewQuiz: () -> Unit,
+    onNavigateBack: () -> Unit
+) {
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.quiz_finished_title),
+                style = MaterialTheme.typography.headlineLarge,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = stringResource(R.string.quiz_result_score, correctAnswers, QUIZ_SIZE),
+                style = MaterialTheme.typography.titleLarge
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+            Button(onClick = onStartNewQuiz) {
+                Text(text = stringResource(R.string.start_new_quiz_button))
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(onClick = onNavigateBack) {
+                Text(text = stringResource(R.string.back_to_welcome_screen_button))
+            }
+        }
+    }
+}
+
 
 @Composable
 fun LoadingScreen() {
@@ -98,13 +145,14 @@ fun ErrorScreen(errorMessage: String) {
 
 @Composable
 fun QuizScreen(
-    question: Question ,
+    question: Question,
     shuffledOptions: List<String> = emptyList(),
     grammarTip: GrammarTip = GrammarTip("", ""),
     selectedOption: String = "",
     isAnswered: Boolean = false,
     isCorrect: Boolean = false,
     isHintShown: Boolean = false,
+    currentQuestionIndex: Int = 0,
     onOptionSelected: (String) -> Unit = {},
     onHintToggled: () -> Unit = {},
     onLoadNextQuestion: () -> Unit = {}
@@ -121,7 +169,7 @@ fun QuizScreen(
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                text = stringResource(R.string.grammar_quiz_title_text),
+                text = stringResource(R.string.question_progress, currentQuestionIndex + 1, QUIZ_SIZE),
                 style = MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -153,11 +201,11 @@ fun QuizScreen(
 
             shuffledOptions.forEach { option ->
                 val isSelected = option == selectedOption
-                val isCorrect = option == question.correctOption
+                val isOptionCorrect = option == question.correctOption // Renamed to avoid clash with isCorrect from params
 
                 val borderStroke = when {
                     isSelected && !isCorrect -> BorderStroke(2.dp, Color.Red)
-                    isAnswered && isCorrect -> BorderStroke(2.dp, Color.Green)
+                    isAnswered && isOptionCorrect -> BorderStroke(2.dp, Color.Green)
                     else -> null
                 }
 
@@ -171,7 +219,6 @@ fun QuizScreen(
                 ) {
                     Text(
                         modifier = Modifier.testTag(stringResource(R.string.optionbutton_tag)),
-
                         text = option,
                         style = MaterialTheme.typography.bodyLarge
                     )
@@ -222,8 +269,8 @@ fun QuizScreen(
                             )
                 },
                 label = stringResource(R.string.answer_result_animation_label)
-            ) { isAnswered ->
-                if (isAnswered) {
+            ) { answered ->
+                if (answered) {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         modifier = Modifier.fillMaxWidth()
@@ -261,7 +308,12 @@ fun QuizScreen(
                             onClick = { onLoadNextQuestion() },
                             modifier = Modifier.padding(top = 16.dp)
                         ) {
-                            Text(text = stringResource(R.string.next_question_Button))
+                            val buttonText = if (currentQuestionIndex < QUIZ_SIZE - 1) {
+                                stringResource(R.string.next_question_Button)
+                            } else {
+                                stringResource(R.string.finish_quiz_button)
+                            }
+                            Text(text = buttonText)
                         }
                         GrammarDescription(grammarTip)
                     }
@@ -310,4 +362,3 @@ fun GrammarDescription(grammarDescription: GrammarTip) {
         }
     }
 }
-

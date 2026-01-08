@@ -17,9 +17,12 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
+private const val QUIZ_SIZE = 10
 
 @HiltViewModel
 class GrammarQuizViewModel @Inject constructor(
@@ -32,7 +35,7 @@ class GrammarQuizViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(GrammarQuizUiState())
     val uiState: StateFlow<GrammarQuizUiState> = _uiState.asStateFlow()
 
-    private var allQuestions = MutableStateFlow( emptyList<Question>())
+    private var allQuestions: List<Question> = emptyList()
 
     init {
         loadUIData()
@@ -45,29 +48,59 @@ class GrammarQuizViewModel @Inject constructor(
         val questionsFlow = getQuestionsUseCase()
 
         combine(grammarFlow, questionsFlow) { grammarPoints, questions ->
-
+            grammarPoints to questions
+        }.onEach { (grammarPoints, questions) ->
             if (grammarPoints.isEmpty() || questions.isEmpty()) {
-                val errorMessage = when {
-                    questions.isEmpty() && grammarPoints.isEmpty() -> "No data available"
-                    questions.isEmpty() -> "No questions available"
-                    else -> "No grammar points available"
+                if (_uiState.value.uiState !is UiState.SUCCESS) { // Only show error if we haven't succeeded yet
+                    val errorMessage = when {
+                        questions.isEmpty() && grammarPoints.isEmpty() -> "No data available"
+                        questions.isEmpty() -> "No questions available"
+                        else -> "No grammar points available"
+                    }
+                    _uiState.update { it.copy(uiState = UiState.ERROR(errorMessage)) }
                 }
-                _uiState.update { it.copy(uiState = UiState.ERROR(errorMessage)) }
+                return@onEach
+            }
 
-            } else  {
-                allQuestions.value = questions
+            // We have data
+            allQuestions = questions
+
+            if (_uiState.value.uiState !is UiState.SUCCESS) { // Check the UI state itself as a flag
                 _uiState.update { it.copy(grammarPoints = grammarPoints, uiState = UiState.SUCCESS) }
-
-                if (uiState.value.question == null)
-                    loadNextQuestion(questions)
+                startNewQuiz()
             }
         }.launchIn(viewModelScope)
     }
 
-    fun loadNextQuestion(questions: List<Question> = allQuestions.value) {
-        if (questions.isNotEmpty()) {
-            val nextQuestion = questions.random()
+    fun startNewQuiz() {
+        if (allQuestions.size < QUIZ_SIZE) {
+            _uiState.update { it.copy(uiState = UiState.ERROR("Not enough questions to start a quiz.")) }
+            return
+        }
+        val quizQuestions = allQuestions.shuffled().take(QUIZ_SIZE)
+        val firstQuestion = quizQuestions.first()
+        val grammarTip = getGrammarTipById(firstQuestion.grammarPointId)
+        _uiState.update {
+            it.copy(
+                quizQuestions = quizQuestions,
+                currentQuestionIndex = 0,
+                correctAnswersCount = 0,
+                isQuizFinished = false,
+                isAnswered = false,
+                isCorrect = false,
+                selectedOption = "",
+                question = firstQuestion,
+                shuffledOptions = getShuffledOptions(firstQuestion),
+                grammarTip = grammarTip,
+                isHintShown = false
+            )
+        }
+    }
 
+    private fun loadQuestionAtIndex(index: Int) {
+        val quizQuestions = _uiState.value.quizQuestions
+        if (index < quizQuestions.size) {
+            val nextQuestion = quizQuestions[index]
             val grammarTip = getGrammarTipById(nextQuestion.grammarPointId)
             _uiState.update {
                 it.copy(
@@ -77,22 +110,30 @@ class GrammarQuizViewModel @Inject constructor(
                     isAnswered = false,
                     isCorrect = false,
                     isHintShown = false,
-                    selectedOption = ""
+                    selectedOption = "",
+                    currentQuestionIndex = index
                 )
             }
+        }
+    }
+
+    fun loadNextQuestion() {
+        val nextIndex = _uiState.value.currentQuestionIndex + 1
+        if (nextIndex < _uiState.value.quizQuestions.size) {
+            loadQuestionAtIndex(nextIndex)
         } else {
-            _uiState.update { it.copy(uiState = UiState.ERROR("No questions available")) }
+            _uiState.update { it.copy(isQuizFinished = true) }
         }
     }
 
     private fun getGrammarTipById(grammarPointId: Int): GrammarTip {
+        // Read from the uiState which is the single source of truth for the UI.
         val grammarPoint = _uiState.value.grammarPoints.find { it.id == grammarPointId }
 
-        val grammarTip = GrammarTip(
+        return GrammarTip(
             title = grammarPoint?.grammar ?: "",
             explanation = grammarPoint?.explanation ?: ""
         )
-        return grammarTip
     }
 
     private fun getShuffledOptions(question: Question): List<String> {
@@ -106,38 +147,36 @@ class GrammarQuizViewModel @Inject constructor(
     }
 
     fun processAnswer(selectedOption: String) {
-        val isAnswerCorrect = selectedOption == _uiState.value.question?.correctOption
-        if (isAnswerCorrect){
-            increaseCurrentQuestionMastery()
-        }
-        _uiState.update {
-            it.copy(
+        _uiState.update { currentState ->
+            val currentQuestion = currentState.question ?: return@update currentState
+            val isAnswerCorrect = selectedOption == currentQuestion.correctOption
+
+            var updatedCorrectAnswersCount = currentState.correctAnswersCount
+            var updatedQuestion = currentQuestion
+
+            if (isAnswerCorrect) {
+                updatedCorrectAnswersCount++
+                val newMastery = (currentQuestion.mastery + 1).coerceAtMost(QUESTION_MASTERY_MAX_LEVEL)
+                if (newMastery > currentQuestion.mastery) {
+                    viewModelScope.launch(ioDispatcher) {
+                        updateQuestionMasteryUseCase(currentQuestion.id, newMastery)
+                    }
+                    updatedQuestion = currentQuestion.copy(mastery = newMastery)
+                }
+            }
+
+            currentState.copy(
                 isAnswered = true,
                 isCorrect = isAnswerCorrect,
-                selectedOption = selectedOption
-
+                selectedOption = selectedOption,
+                correctAnswersCount = updatedCorrectAnswersCount,
+                question = updatedQuestion
             )
         }
     }
 
     fun onHintToggled() {
         _uiState.update { it.copy(isHintShown = !it.isHintShown) }
-    }
-
-    private fun increaseCurrentQuestionMastery() {
-        _uiState.value.question?.let { currentQuestion ->
-            val newMastery = (currentQuestion.mastery + 1).coerceAtMost(QUESTION_MASTERY_MAX_LEVEL)
-
-            if (newMastery > currentQuestion.mastery) {
-                viewModelScope.launch(ioDispatcher) {
-                    updateQuestionMasteryUseCase(currentQuestion.id, newMastery)
-                }
-
-                _uiState.update { currentState ->
-                    currentState.copy(question = currentQuestion.copy(mastery = newMastery))
-                }
-            }
-        }
     }
 }
 
@@ -150,7 +189,11 @@ data class GrammarQuizUiState(
     val isAnswered: Boolean = false,
     val isCorrect: Boolean = false,
     val isHintShown: Boolean = false,
-    val selectedOption: String = ""
+    val selectedOption: String = "",
+    val quizQuestions: List<Question> = emptyList(),
+    val currentQuestionIndex: Int = 0,
+    val correctAnswersCount: Int = 0,
+    val isQuizFinished: Boolean = false
 )
 
 data class GrammarTip(

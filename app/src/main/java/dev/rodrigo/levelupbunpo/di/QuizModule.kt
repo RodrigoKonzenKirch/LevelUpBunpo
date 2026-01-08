@@ -15,9 +15,14 @@ object QuizModule {
 
     @IntoSet
     @Provides
-    fun provideEntryProviderInstaller() : EntryProviderInstaller = {
+    fun provideEntryProviderInstaller(navigator: Navigator) : EntryProviderInstaller = {
         entry<Quiz>{
-            GrammarQuizScreen()
+            GrammarQuizScreen(
+                onNavigateBack = {
+                    navigator.backStack.clear()
+                    navigator.goTo(Welcome)
+                }
+            )
         }
     }
 

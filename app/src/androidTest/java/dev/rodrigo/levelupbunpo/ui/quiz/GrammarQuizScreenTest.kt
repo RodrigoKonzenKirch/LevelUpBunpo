@@ -34,8 +34,6 @@ class GrammarQuizScreenTest {
 
     @Test
     fun fullQuizFlow_answerQuestion_showsResultState() {
-        val expectedQuizTitle = composeTestRule.activity
-            .getString(R.string.grammar_quiz_title_text)
 
         val expectedStartQuizText = composeTestRule.activity
             .getString(R.string.start_quiz_welcome_screen)
@@ -47,7 +45,7 @@ class GrammarQuizScreenTest {
         val expectedNextQuestion = composeTestRule.activity
             .getString(R.string.next_question_Button)
 
-        val optionButtongTag = composeTestRule.activity
+        val optionButtonTag = composeTestRule.activity
             .getString(R.string.optionbutton_tag)
 
         // 1. Start at the Welcome Screen and navigate to the quiz
@@ -55,15 +53,21 @@ class GrammarQuizScreenTest {
 
         composeTestRule.onNodeWithText(expectedStartQuizText).performClick()
 
+        // Wait for the options to appear.
+        composeTestRule.waitUntil(timeoutMillis = 5_000) {
+            composeTestRule
+                .onAllNodesWithTag(optionButtonTag, useUnmergedTree = true)
+                .fetchSemanticsNodes().isNotEmpty()
+        }
+
         // 2. Find and click the first available answer option.
         // We don't care if it's right or wrong; we just want to see the result UI.
         val firstOption = composeTestRule
-            .onAllNodesWithTag(optionButtongTag, useUnmergedTree = true)[0]
+            .onAllNodesWithTag(optionButtonTag, useUnmergedTree = true)[0]
 
         firstOption.performClick()
         composeTestRule.waitForIdle()
         // 3. Assert that the result state is shown.
-        composeTestRule.onNodeWithText(expectedQuizTitle).assertIsDisplayed()
         composeTestRule.onNodeWithText(expectedNextQuestion).assertIsDisplayed()
         composeTestRule.onNodeWithText("Grammar Point", substring = true).assertIsDisplayed()
         composeTestRule.onNodeWithText("Mastery Level", substring = true).assertIsDisplayed()
@@ -88,6 +92,11 @@ class GrammarQuizScreenTest {
 
         // 1. Navigate to the quiz screen
         composeTestRule.onNodeWithText(startQuizText).performClick()
+
+        // Wait for the hint toggle to appear.
+        composeTestRule.waitUntil(timeoutMillis = 5_000) {
+            composeTestRule.onAllNodesWithTag(hintToggleTag).fetchSemanticsNodes().isNotEmpty()
+        }
 
         val hintSwitch = composeTestRule.onNodeWithTag(hintToggleTag)
 

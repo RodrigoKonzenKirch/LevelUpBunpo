@@ -1,4 +1,4 @@
-package dev.rodrigo.levelupbunpo.di
+package dev.rodrigo.levelupbunpo.di.navigation
 
 import dagger.Module
 import dagger.Provides

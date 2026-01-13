@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import dagger.hilt.android.AndroidEntryPoint
-import dev.rodrigo.levelupbunpo.di.EntryProviderInstaller
-import dev.rodrigo.levelupbunpo.di.Navigator
+import dev.rodrigo.levelupbunpo.di.navigation.EntryProviderInstaller
+import dev.rodrigo.levelupbunpo.di.navigation.Navigator
 import dev.rodrigo.levelupbunpo.ui.theme.LevelUpBunpoTheme
 import javax.inject.Inject
 

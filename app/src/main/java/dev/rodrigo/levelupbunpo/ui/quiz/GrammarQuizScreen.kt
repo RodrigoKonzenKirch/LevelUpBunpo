@@ -1,5 +1,6 @@
 package dev.rodrigo.levelupbunpo.ui.quiz
 
+import android.media.MediaPlayer
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
@@ -25,10 +26,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -48,6 +53,31 @@ fun GrammarQuizScreen(
     onNavigateBack: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val context = LocalContext.current
+
+    val correctSoundPlayer = remember { MediaPlayer.create(context, R.raw.correct_answer) }
+    val wrongSoundPlayer = remember { MediaPlayer.create(context, R.raw.wrong_answer) }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            correctSoundPlayer.release()
+            wrongSoundPlayer.release()
+        }
+    }
+
+    LaunchedEffect(uiState.playCorrectSound) {
+        if (uiState.playCorrectSound) {
+            correctSoundPlayer.start()
+            viewModel.onSoundPlayed()
+        }
+    }
+
+    LaunchedEffect(uiState.playWrongSound) {
+        if (uiState.playWrongSound) {
+            wrongSoundPlayer.start()
+            viewModel.onSoundPlayed()
+        }
+    }
 
     when (uiState.uiState) {
         is UiState.LOADING -> LoadingScreen()

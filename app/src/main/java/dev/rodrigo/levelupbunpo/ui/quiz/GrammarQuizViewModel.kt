@@ -170,13 +170,21 @@ class GrammarQuizViewModel @Inject constructor(
                 isCorrect = isAnswerCorrect,
                 selectedOption = selectedOption,
                 correctAnswersCount = updatedCorrectAnswersCount,
-                question = updatedQuestion
+                question = updatedQuestion,
+                playCorrectSound = isAnswerCorrect,
+                playWrongSound = !isAnswerCorrect
             )
         }
     }
 
     fun onHintToggled() {
         _uiState.update { it.copy(isHintShown = !it.isHintShown) }
+    }
+
+    fun onSoundPlayed() {
+        _uiState.update {
+            it.copy(playCorrectSound = false, playWrongSound = false)
+        }
     }
 }
 
@@ -193,7 +201,9 @@ data class GrammarQuizUiState(
     val quizQuestions: List<Question> = emptyList(),
     val currentQuestionIndex: Int = 0,
     val correctAnswersCount: Int = 0,
-    val isQuizFinished: Boolean = false
+    val isQuizFinished: Boolean = false,
+    val playCorrectSound: Boolean = false,
+    val playWrongSound: Boolean = false
 )
 
 data class GrammarTip(

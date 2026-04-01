@@ -10,13 +10,16 @@ import dev.rodrigo.levelupbunpo.domain.TotalMastery
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit4.MockKRule
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class AchievementsRepositoryImplTest {
 
     @get:Rule
@@ -32,11 +35,15 @@ class AchievementsRepositoryImplTest {
 
     @Before
     fun setup() {
-        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao)
+        // We don't need to pass the dispatcher here if we use runTest's context,
+        // but since the Repository is instantiated before runTest, we use the same scheduler.
     }
 
     @Test
     fun `getTotalMastery returns correct totalMastery`() = runTest {
+        val testDispatcher = StandardTestDispatcher(testScheduler)
+        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao, testDispatcher)
+
         // Arrange
         // Max mastery of each question is 5
         val expectedMaxMastery = 10
@@ -53,6 +60,9 @@ class AchievementsRepositoryImplTest {
 
     @Test
     fun `getTotalMastery when totalMastery returns null returns correct totalMastery`() = runTest {
+        val testDispatcher = StandardTestDispatcher(testScheduler)
+        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao, testDispatcher)
+
         // Arrange
         every { questionDao.getTotalMastery() } returns flowOf(null)
         every { questionDao.getQuestionCount() } returns flowOf(2)
@@ -70,6 +80,9 @@ class AchievementsRepositoryImplTest {
 
     @Test
     fun `getGrammarPointsWithMastery returns list of grammar point with mastery`() = runTest {
+        val testDispatcher = StandardTestDispatcher(testScheduler)
+        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao, testDispatcher)
+
         // Arrange
         val mockGrammarPoints = listOf(
             GrammarPoint(1, "grammar", "jlpt", "meaning", "explanation", 0),
@@ -115,6 +128,9 @@ class AchievementsRepositoryImplTest {
 
     @Test
     fun `getGrammarPointsWithMastery when grammar point has no questions returns correct mastery`() = runTest {
+        val testDispatcher = StandardTestDispatcher(testScheduler)
+        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao, testDispatcher)
+
         // Arrange
         val grammarPoints = listOf(
             GrammarPoint(1, "With Questions", "N5", "m1", "e1", 0),
@@ -147,6 +163,9 @@ class AchievementsRepositoryImplTest {
 
     @Test
     fun `getGrammarPointWithMastery with empty param returns correct answer`() = runTest {
+        val testDispatcher = StandardTestDispatcher(testScheduler)
+        repository = AchievementsRepositoryImpl(questionDao, grammarPointDao, testDispatcher)
+
         // Arrange
         every { grammarPointDao.getAllGrammarPoints() } returns flowOf(emptyList())
         every { questionDao.getMasteryForAllGrammarPoints() } returns flowOf(emptyList())

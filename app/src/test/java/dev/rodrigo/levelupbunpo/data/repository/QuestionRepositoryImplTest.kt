@@ -9,13 +9,16 @@ import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit4.MockKRule
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class QuestionRepositoryImplTest {
 
     @get:Rule
@@ -24,11 +27,13 @@ class QuestionRepositoryImplTest {
     @MockK
     private lateinit var questionDao: QuestionDao
 
+    private val testDispatcher = UnconfinedTestDispatcher()
+
     private lateinit var repository: QuestionRepository
 
     @Before
     fun setUp() {
-        repository = QuestionRepositoryImpl(questionDao)
+        repository = QuestionRepositoryImpl(questionDao, testDispatcher)
     }
 
     @Test

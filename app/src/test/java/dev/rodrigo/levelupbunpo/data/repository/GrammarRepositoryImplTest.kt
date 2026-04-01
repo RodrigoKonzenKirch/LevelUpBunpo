@@ -8,13 +8,16 @@ import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.junit4.MockKRule
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+@OptIn(ExperimentalCoroutinesApi::class)
 class GrammarRepositoryImplTest {
 
     @get:Rule
@@ -23,11 +26,13 @@ class GrammarRepositoryImplTest {
     @MockK(relaxed = true)
     private lateinit var grammarPointDao: GrammarPointDao
 
+    private val testDispatcher = UnconfinedTestDispatcher()
+
     private lateinit var repository: GrammarRepository
 
     @Before
     fun setUp() {
-        repository = GrammarRepositoryImpl(grammarPointDao)
+        repository = GrammarRepositoryImpl(grammarPointDao, testDispatcher)
     }
 
     @Test

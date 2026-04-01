@@ -2,18 +2,22 @@ package dev.rodrigo.levelupbunpo.data.repository
 
 import dev.rodrigo.levelupbunpo.data.local.GrammarPointDao
 import dev.rodrigo.levelupbunpo.data.local.QuestionDao
+import dev.rodrigo.levelupbunpo.di.DispatcherIo
 import dev.rodrigo.levelupbunpo.domain.AchievementsRepository
 import dev.rodrigo.levelupbunpo.domain.GrammarPointWithMastery
 import dev.rodrigo.levelupbunpo.domain.TotalMastery
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
 const val MAX_MASTERY_PER_QUESTION = 5
 
 class AchievementsRepositoryImpl @Inject constructor(
     private val questionDao: QuestionDao,
-    private val grammarPointDao: GrammarPointDao
+    private val grammarPointDao: GrammarPointDao,
+    @DispatcherIo private val ioDispatcher: CoroutineDispatcher
 ) : AchievementsRepository {
 
     override fun getTotalMastery(): Flow<TotalMastery> {
@@ -24,7 +28,7 @@ class AchievementsRepositoryImpl @Inject constructor(
             val currentMastery = totalMastery ?: 0
             val maxMastery = questionCount * MAX_MASTERY_PER_QUESTION
             TotalMastery(currentMastery, maxMastery)
-        }
+        }.flowOn(ioDispatcher)
     }
 
     override fun getGrammarPointsWithMastery(): Flow<List<GrammarPointWithMastery>> {
@@ -47,6 +51,6 @@ class AchievementsRepositoryImpl @Inject constructor(
                     maxMastery = maxMastery
                 )
             }
-        }
+        }.flowOn(ioDispatcher)
     }
 }
